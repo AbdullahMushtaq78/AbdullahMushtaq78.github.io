@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah - Project Krypton Library</title>
+
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LXQLH66J4S');
+    </script>
+</head>
+
+
+<html>
+<body>
+    <main>
+
+        <div class="main-content">
+
+            <!--
+            - #NAVBAR
+            -->
+
+            <nav class="navbar">
+
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="../Projects.html" class="navbar-link active">Projects</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+            <!--
+            Project Details
+            -->
+
+            <article class="about  active" data-page="about">
+
+                <header>
+                    <h2 class="h2 article-title">Krypton: Neural Networks Library from Scratch</h2>
+                </header>
+                <figure class="blog-banner-box">
+                    <img src="images/KryptionLibrary.jpg" alt="Krypton: Neural Networks Library from Scratch" loading="lazy">
+                </figure>
+
+                <section class="about-text">
+                    <p>I'm excited to share my journey in developing a Neural Network Library from scratch. This project has been a labor of love and an incredible learning experience. I've built this library to offer a fundamental understanding of how neural networks operate, and it's designed for educational purposes, allowing users to grasp the underlying mechanics of neural network algorithms.</p>
+                    <br />    
+                    <h3 style="text-align: center; padding-bottom: 10px;">Core Features of the Library</h3>
+                    <ul>
+                        <li><strong>Custom Neural Network Implementation:</strong> The heart of this library lies in the <code>krypton.py</code> file, where I've implemented a custom neural network. This implementation is not just a wrapper around existing libraries; it's built from the ground up, offering a deeper insight into the workings of neural networks.</li>
+                        <li><strong>Flexibility and Extensibility:</strong> The library is designed to be flexible and easily extendable. Users can modify and expand upon the existing codebase to experiment with different neural network architectures and parameters.</li>
+                    </ul>
+                    <br />
+                    <h3 style="text-align: center; padding-bottom: 10px;">Key Components of the Code</h3>
+                    <ol>
+                        <li><strong> ->Neural Network Class:</strong> The core of the library is the Neural Network class, which encapsulates all the necessary functionalities. This class includes methods for adding layers, setting up the network, and defining the forward and backward propagation.</li>
+                        <li><strong> ->Activation Functions:</strong> I've implemented various activation functions like Sigmoid, Tanh, and ReLU. These functions are crucial for introducing non-linearity into the network, allowing it to learn complex patterns.</li>
+                        <li><strong> ->Loss Functions:</strong> The library includes implementation for different loss functions such as Mean Squared Error (MSE) and Cross-Entropy. These functions are essential for evaluating the performance of the network.</li>
+                        <li><strong> ->Backpropagation Algorithm:</strong> One of the key features is the implementation of the backpropagation algorithm. This algorithm is the backbone of training neural networks, allowing the model to adjust its weights based on the error gradient.</li>
+                    </ol>
+                    <br />
+                    <h3 style="text-align: center; padding-bottom: 10px;">Libraries Used</h3>
+                    <p>The library is built using Python, leveraging its simplicity and extensive ecosystem. The primary external library used is NumPy, which is essential for efficient numerical computations. NumPy arrays form the backbone of this library, enabling fast and efficient operations that are crucial for neural network computations.</p>
+                    <br />
+                    <h3 style="text-align: center; padding-bottom: 10px;">Implementation Details</h3>
+                    <ul>
+                        <li><strong>Matrix Operations:</strong> The library heavily relies on matrix operations for computations in forward and backward propagation. These operations are efficiently handled by NumPy, ensuring the library is not only educational but also performs well.</li>
+                        <li><strong>Layer-wise Architecture:</strong> The neural network is structured in a layer-wise manner, allowing for a clear and modular design. Each layer can have its own activation function, making the network highly customizable.</li>
+                        <li><strong>Gradient Descent Optimization:</strong> The library uses gradient descent for optimizing the network's weights. This method is fundamental to the learning process of neural networks.</li>
+                    </ul>
+                    <br />
+                    <h3 style="text-align: center; padding-bottom: 10px;">Visualizations and Examples</h3>
+                    <p>I've included visualizations and results of an example in the README.md file. These images and examples demonstrate the library's capabilities and provide a practical understanding of neural network concepts.</p>
+                    <h4>Experimental Configurations:</h4>
+                    <ul>
+                        <li>Layer 1 size: 784 units</li>
+                        <li>Layer 2 size: 256 units</li>
+                        <li>Layer 3 size: 128 units</li>
+                        <li>Layer 4 size: 10 units</li>
+                        <li>Learning rate = 0.1</li>
+                        <li>Decay rate = 1e-7</li>
+                        <li>Momentum = 0.9</li>
+                        <li>Activations =
+                            <ul class="nested">
+                                <li>Sigmoid</li>
+                                <li>Sigmoid</li>
+                                <li>Softmax</li>
+                            </ul>
+                        </li>
+                        <li>Loss = Categorical Cross Entropy</li>
+                        <li>Optimizer = SGD with momentum</li>
+                        <li>Epochs = 200</li>
+                        <li>Mean Subtraction = True</li>
+                        <li>Batch size = 64</li>
+                    </ul>
+                    <hr style="width: 50%; margin: 0 auto; border: 1px solid;"> <br/>
+                    <p style="text-align: center; padding-bottom: 10px;">Training, Validation, and Testing Curves Graph</p>
+                    <img class="project-center-image" src="https://user-images.githubusercontent.com/96788451/239736654-031df827-7463-42fc-b26c-5cacbfea1709.png" alt="Training, Validation, and Testing Curves Graph">
+                    <br />
+                    <p style="text-align: center; padding-bottom: 10px;">Confusion Matrix</p>
+                    <img class="project-center-image" src="https://user-images.githubusercontent.com/96788451/239736786-637c401d-5cb1-4a04-91da-74d770d3c94a.png" alt="Confusion Matrix">
+                    
+                    <br />
+                    <hr style="width: 50%; margin: 0 auto; border: 1px solid;"> <br/>
+                    <h3 style="text-align: center; padding-bottom: 10px;">Conclusion</h3>
+                    <p>Developing this Neural Network Library from scratch has been an enriching experience. It's designed to be a learning tool for those interested in understanding the nuts and bolts of neural networks. I hope this library will be a valuable resource for students, educators, and anyone curious about the inner workings of neural networks.</p>
+                    <br />
+                    <p>Feel free to explore the library and experiment with it. Your feedback and contributions are always welcome!</p>
+                
+                </section>
+
+
+
+            </article>
+
+        </div>
+
+    </main>
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+
+
+   
