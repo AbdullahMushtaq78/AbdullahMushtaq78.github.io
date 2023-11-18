@@ -1871,6 +1871,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+  .confirmation-message {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 
 
   /**

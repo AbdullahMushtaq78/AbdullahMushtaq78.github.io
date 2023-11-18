@@ -56,3 +56,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+var submitted = false;
+
+document.getElementById('mG61Hd').onsubmit = function() {
+    submitted = true;
+};
+
+function showConfirmation() {
+    document.getElementById('formConfirmation').style.display = 'block';
+}
+

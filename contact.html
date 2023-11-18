@@ -49,9 +49,12 @@
 
             <div class="sidebar-info">
 
-                <figure class="avatar-box">
-                    <img src="./assets/images/Profile images/img4.jpg" style="border-radius: 10%;" alt="Abdullah" width="80">
-                </figure>
+                <a href="./index.html" >
+
+                    <figure class="avatar-box">
+                        <img src="./assets/images/Profile images/img4.jpg" style="border-radius: 10%;" alt="Abdullah" width="80">
+                    </figure>
+                </a>
 
                 <div class="info-content">
                     <h1 class="name" title="Abdullah">Abdullah</h1>
@@ -211,17 +214,17 @@
 
                     <h3 class="h3 form-title">Contact Form</h3>
 
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdHuaCNbJULvQgHst6sPGT2tW5I8PzSLpKuL5MbUudQeFL6ag/formResponse"
-                          target="_self" method="POST" id="mG61Hd"
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdAoCXFjgSSXKaPW4u3MNQyHZ-umYUucwmtaRX6zoY75gxx_A/formResponse"
+                          target="hidden_iframe" method="POST" id="mG61Hd"
                           name="EmailForm" class="form" data-form>
 
                         <div class="input-wrapper">
-                            <input type="text" name="entry.810455347" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="text" name="entry.1639971460" class="form-input" placeholder="Full name" required data-form-input>
 
-                            <input type="email" name="entry.637228470" class="form-input" placeholder="Email address" required data-form-input>
+                            <input type="email" name="entry.448464982" class="form-input" placeholder="Email address" required data-form-input>
                         </div>
 
-                        <textarea name="entry.723078861" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <textarea name="entry.838822076" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
                         <button class="form-btn" type="submit" disabled data-form-btn>
                             <ion-icon name="paper-plane"></ion-icon>
@@ -229,10 +232,18 @@
                         </button>
 
                     </form>
+    
+                    <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {showConfirmation();}" style="display:none;"></iframe>
+
+                    <div id="formConfirmation" class="confirmation-message" style="display: none; margin-top:25px ; border: 1px solid var(--jet);
+                    border-radius: 14px;">
+                    <p>Your form has been submitted successfully!</p>
+                    </div>
                 </section>
+                
 
             </article>
-
+            
         </div>
 
     </main>
