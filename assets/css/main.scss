@@ -1,66 +1,51 @@
 ---
+# Only the main import — do not remove front matter
 ---
 
-/* ── Smooth scroll ── */
-html { scroll-behavior: smooth; }
+@import "minimal-mistakes/skins/default"; // skin
+@import "minimal-mistakes"; // main styles
 
-/* ── Font size reduction ──
-   MM sets font sizes on specific elements, not just html/body,
-   so we must override each one directly with !important.
-   Target: ~13px effective size (MM default is ~16px). ── */
-
-body { font-size: 13px !important; }
-
+/* ── Font size reduction ── */
+body,
 .page__content p,
 .page__content li,
+.page__content ul,
+.page__content ol,
 .page__content td,
 .page__content dd,
-.page__content dt,
 .page__content blockquote {
   font-size: 13px !important;
   line-height: 1.7 !important;
 }
 
-/* Headings scaled down proportionally */
 .page__content h1 { font-size: 1.6em !important; }
 .page__content h2 { font-size: 1.3em !important; }
 .page__content h3 { font-size: 1.1em !important; }
 .page__content h4 { font-size: 1.0em !important; }
 
-/* Sidebar text */
-.author__name  { font-size: 1.0em !important; }
-.author__bio   { font-size: 0.85em !important; }
+.author__name   { font-size: 1.0em !important; }
+.author__bio    { font-size: 0.85em !important; }
 .author__urls a { font-size: 0.85em !important; }
+.greedy-nav a   { font-size: 0.8em !important; }
 
-/* Nav links */
-.greedy-nav a  { font-size: 0.8em !important; }
-
-/* ── Profile avatar: larger ── */
+/* ── Profile avatar ── */
 .author__avatar img {
   max-width: 160px !important;
   width: 160px !important;
 }
-.author__avatar {
-  display: block;
-  text-align: center;
-}
+.author__avatar { display: block; text-align: center; }
 
-/* ── Visited links same color as unvisited ── */
+/* ── Visited links ── */
 a:visited { color: #0645ad; }
 
-/* ── Publication title: black, no underline on hover ── */
+/* ── Publication title: black ── */
 .pub-title-link {
   color: #111 !important;
   font-weight: 600;
   text-decoration: none;
 }
-.pub-title-link:hover {
-  text-decoration: underline;
-  color: #111 !important;
-}
-.pub-title-link:visited {
-  color: #111 !important;
-}
+.pub-title-link:hover   { text-decoration: underline; color: #111 !important; }
+.pub-title-link:visited { color: #111 !important; }
 
 /* ── News scroll box ── */
 .news-box {
@@ -76,15 +61,8 @@ a:visited { color: #0645ad; }
   box-shadow: 0 1px 3px rgba(0,0,0,.06);
 }
 .news-box::-webkit-scrollbar { width: 4px; }
-.news-box::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 4px;
-}
-.news-box ul {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+.news-box::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+.news-box ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
 .news-box li {
   padding: 0.45rem 1rem;
   border-bottom: 1px solid #f3f4f6;
@@ -104,3 +82,6 @@ a:visited { color: #0645ad; }
   border-radius: 6px;
   display: block;
 }
+
+/* ── Smooth scroll ── */
+html { scroll-behavior: smooth; }
