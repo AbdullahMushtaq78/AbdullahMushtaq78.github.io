@@ -5,7 +5,7 @@
 // ── Override MM variables BEFORE importing the theme ──
 // $doc-font-size controls the base rem reference MM uses everywhere.
 // Default is 16. Dropping to 13 scales all em/rem-based type proportionally.
-// $doc-font-size: 16;
+$doc-font-size: 20;
 
 // Tighten the type scale slightly so headings aren't oversized
 // $type-size-1 : 1.8em;
