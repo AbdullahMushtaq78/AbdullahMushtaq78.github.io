@@ -37,7 +37,7 @@ $type-size-6 : 0.75em;
 // .author__avatar { display: block; text-align: center; }
 
 /* ── Visited links ── */
-a:visited { color: #0645ad; }
+// a:visited { color: #0645ad; }
 
 /* ── Publication title: black ── */
 .pub-title-link {
@@ -61,7 +61,7 @@ a:visited { color: #0645ad; }
   background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,.06);
 }
-.news-box::-webkit-scrollbar { width: 4px; }
+.news-box::-webkit-scrollbar { width: 8px; }
 .news-box::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
 .news-box ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
 .news-box li {
