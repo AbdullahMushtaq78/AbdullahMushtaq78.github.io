@@ -5,7 +5,7 @@
 // ── Override MM variables BEFORE importing the theme ──
 // $doc-font-size controls the base rem reference MM uses everywhere.
 // Default is 16. Dropping to 13 scales all em/rem-based type proportionally.
-$doc-font-size: 13;
+$doc-font-size: 15;
 
 // Tighten the type scale slightly so headings aren't oversized
 $type-size-1 : 1.8em;
@@ -18,10 +18,21 @@ $type-size-6 : 0.75em;
 @import "minimal-mistakes/skins/default"; // skin
 @import "minimal-mistakes"; // main styles
 
+/* ── Navbar: site title and nav links in black ── */
+.masthead__menu-item a,
+.greedy-nav a,
+.greedy-nav .site-title {
+  color: #111 !important;
+}
+.greedy-nav a:hover,
+.greedy-nav .site-title:hover {
+  color: #444 !important;
+}
+
 /* ── Profile avatar ── */
 .author__avatar img {
-  max-width: 160px !important;
-  width: 160px !important;
+  max-width: 140px !important;
+  width: 140px !important;
 }
 .author__avatar { display: block; text-align: center; }
 

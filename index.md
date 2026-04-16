@@ -17,19 +17,19 @@ I hold a B.S. in Computer Science from [Information Technology University](https
 
 ## Career
 
-- **Aug. 2025 -- Present** &nbsp; Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar (PIs: [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/), Harvard & Qatar University; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
-- **May 2025 -- Aug. 2025** &nbsp; Research Assistant (remote) at [Hamad Bin Khalifa University (HBKU)](https://www.hbku.edu.qa/), Doha, Qatar
-- **Jul. 2024 -- Jul. 2025** &nbsp; Research Assistant at [Zayed University](https://www.zu.ac.ae/), Abu Dhabi, UAE (supervised by [Imran Hashmi](https://www.cs.ox.ac.uk/people/imran.hashmi/), Oxford; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University; [Imran Taj](https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_interdisciplinary_studies/faculty_and_staff/_profiles/muhammad_imran_taj), Zayed University)
-- **Aug. 2024 -- Nov. 2024** &nbsp; Research Assistant at [LUMS](https://lums.edu.pk/) in collaboration with [Stanford Research Institute](https://www.csl.sri.com/people/gehani/), Lahore, Pakistan
-- **Aug. 2023 -- Apr. 2024** &nbsp; Undergraduate Research Assistant, [CSaLT Lab, LUMS](https://lums.edu.pk/) (joint with [Imperial College London](https://www.imperial.ac.uk/))
-- **Aug. 2023 -- Apr. 2024** &nbsp; Research Intern, [Intelligent Machines Lab (IML), ITU](https://itu.edu.pk/) (joint with ETRI, South Korea)
-- **2023 -- 2024** &nbsp; Lab Lead (NLP & VR), [Virtuality Labs, ITU](https://itu.edu.pk/)
-- **Aug. 2023 -- Jun. 2024** &nbsp; Teaching Assistant, [Information Technology University](https://itu.edu.pk/), Lahore
-- **2020 -- 2024** &nbsp; B.S. Computer Science, [Information Technology University](https://itu.edu.pk/), Lahore -- Dean's Honor List, Top 5%
+- **Aug. 2025 ~ Present** &nbsp; Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar (PIs: [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/), Harvard & Qatar University; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
+- **May 2025 ~ Aug. 2025** &nbsp; Research Assistant (remote) at [Hamad Bin Khalifa University (HBKU)](https://www.hbku.edu.qa/), Doha, Qatar
+- **Jul. 2024 ~ Jul. 2025** &nbsp; Research Assistant at [Zayed University](https://www.zu.ac.ae/), Abu Dhabi, UAE (supervised by [Imran Hashmi](https://www.cs.ox.ac.uk/people/imran.hashmi/), Oxford; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University; [Imran Taj](https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_interdisciplinary_studies/faculty_and_staff/_profiles/muhammad_imran_taj), Zayed University)
+- **Aug. 2024 ~ Nov. 2024** &nbsp; Research Assistant at [LUMS](https://lums.edu.pk/) in collaboration with [Stanford Research Institute](https://www.csl.sri.com/people/gehani/), Lahore, Pakistan
+- **Aug. 2023 ~ Apr. 2024** &nbsp; Undergraduate Research Assistant, [CSaLT Lab, LUMS](https://lums.edu.pk/) (joint with [Imperial College London](https://www.imperial.ac.uk/))
+- **Aug. 2023 ~ Apr. 2024** &nbsp; Research Intern, [Intelligent Machines Lab (IML), ITU](https://itu.edu.pk/) (joint with ETRI, South Korea)
+- **2023 ~ 2024** &nbsp; Lab Lead (NLP & VR), [Virtuality Labs, ITU](https://itu.edu.pk/)
+- **Aug. 2023 ~ Jun. 2024** &nbsp; Teaching Assistant, [Information Technology University](https://itu.edu.pk/), Lahore
+- **2020 ~ 2024** &nbsp; B.S. Computer Science, [Information Technology University](https://itu.edu.pk/), Lahore -- Dean's Honor List, Top 5%
 
 ---
 
-## Recent News
+## News
 
 <div class="news-box">
 <ul>

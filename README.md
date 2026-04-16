@@ -1,27 +1,37 @@
-# Minimal Mistakes remote theme starter
+# Abdullah Mushtaq — Academic Portfolio
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Personal academic website built with [Jekyll](https://jekyllrb.com/) and the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme, hosted on GitHub Pages.
 
-Contains basic configuration to get you a site with:
+**Live site:** [abdullahmushtaq78.github.io](https://abdullahmushtaq78.github.io)
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## Pages
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+| Page | Path |
+|---|---|
+| About, Career, News | `index.md` |
+| Publications | `_pages/publications.md` |
+| Teaching | `_pages/teaching.md` |
+| Services | `_pages/services.md` |
+| Media & Awards | `_pages/media.md` |
+| CV | `_pages/cv.md` |
 
----
+## Structure
 
-## Troubleshooting
+```
+├── _config.yml          # site settings, author info, sidebar links
+├── _data/navigation.yml # top nav links
+├── _pages/              # site pages
+├── assets/
+│   ├── css/main.scss    # custom styles + MM theme imports
+│   ├── images/          # profile photo and paper thumbnails
+│   └── pdf/cv.pdf       # CV PDF
+└── index.md             # homepage
+```
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+## Updating content
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+- **New publication:** add an entry to `_pages/publications.md`
+- **New news item:** add a `<li>` in the news box in `index.md`
+- **Update CV:** replace `assets/pdf/cv.pdf`
+- **Profile photo:** replace `assets/images/bio-photo.WEBP`
+- **Sidebar links:** edit `author.links` in `_config.yml`
