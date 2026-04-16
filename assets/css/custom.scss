@@ -2,10 +2,20 @@
 ---
 
 /* ── Font size reduction (MM default is ~16px, dropping to ~13.5px) ── */
-html { font-size: 13.5px !important; }
+html { font-size: 11px !important; }
 
 /* ── Smooth scroll ── */
 html { scroll-behavior: smooth; }
+
+/* ── Profile avatar: larger ── */
+.author__avatar img {
+  max-width: 160px !important;
+  width: 160px !important;
+}
+.author__avatar {
+  display: block;
+  text-align: center;
+}
 
 /* ── Visited links same color as unvisited ── */
 a:visited { color: #0645ad; }
@@ -50,8 +60,8 @@ a:visited { color: #0645ad; }
 .news-box li {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #f3f4f6;
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-size: 0.6rem;
+  line-height: 1;
   margin: 0 !important;
 }
 .news-box li:last-child { border-bottom: none; }
