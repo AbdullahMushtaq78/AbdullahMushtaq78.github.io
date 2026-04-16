@@ -2,31 +2,21 @@
 # Only the main import — do not remove front matter
 ---
 
+// ── Override MM variables BEFORE importing the theme ──
+// $doc-font-size controls the base rem reference MM uses everywhere.
+// Default is 16. Dropping to 13 scales all em/rem-based type proportionally.
+$doc-font-size: 13;
+
+// Tighten the type scale slightly so headings aren't oversized
+$type-size-1 : 1.8em;
+$type-size-2 : 1.4em;
+$type-size-3 : 1.2em;
+$type-size-4 : 1.05em;
+$type-size-5 : 1em;
+$type-size-6 : 0.75em;
+
 @import "minimal-mistakes/skins/default"; // skin
 @import "minimal-mistakes"; // main styles
-
-/* ── Font size reduction ── */
-body,
-.page__content p,
-.page__content li,
-.page__content ul,
-.page__content ol,
-.page__content td,
-.page__content dd,
-.page__content blockquote {
-  font-size: 13px !important;
-  line-height: 1.7 !important;
-}
-
-.page__content h1 { font-size: 1.6em !important; }
-.page__content h2 { font-size: 1.3em !important; }
-.page__content h3 { font-size: 1.1em !important; }
-.page__content h4 { font-size: 1.0em !important; }
-
-.author__name   { font-size: 1.0em !important; }
-.author__bio    { font-size: 0.85em !important; }
-.author__urls a { font-size: 0.85em !important; }
-.greedy-nav a   { font-size: 0.8em !important; }
 
 /* ── Profile avatar ── */
 .author__avatar img {
