@@ -5,7 +5,7 @@
 // ── Override MM variables BEFORE importing the theme ──
 // $doc-font-size controls the base rem reference MM uses everywhere.
 // Default is 16. Dropping to 13 scales all em/rem-based type proportionally.
-$doc-font-size: 15;
+$doc-font-size: 16;
 
 // Tighten the type scale slightly so headings aren't oversized
 $type-size-1 : 1.8em;
@@ -29,12 +29,12 @@ $type-size-6 : 0.75em;
   color: #444 !important;
 }
 
-/* ── Profile avatar ── */
-.author__avatar img {
-  max-width: 140px !important;
-  width: 140px !important;
-}
-.author__avatar { display: block; text-align: center; }
+// /* ── Profile avatar ── */
+// .author__avatar img {
+//   max-width: 140px !important;
+//   width: 140px !important;
+// }
+// .author__avatar { display: block; text-align: center; }
 
 /* ── Visited links ── */
 a:visited { color: #0645ad; }
