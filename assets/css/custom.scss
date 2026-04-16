@@ -1,11 +1,39 @@
 ---
 ---
 
-/* ── Font size reduction (MM default is ~16px, dropping to ~13.5px) ── */
-html { font-size: 11px !important; }
-
 /* ── Smooth scroll ── */
 html { scroll-behavior: smooth; }
+
+/* ── Font size reduction ──
+   MM sets font sizes on specific elements, not just html/body,
+   so we must override each one directly with !important.
+   Target: ~13px effective size (MM default is ~16px). ── */
+
+body { font-size: 13px !important; }
+
+.page__content p,
+.page__content li,
+.page__content td,
+.page__content dd,
+.page__content dt,
+.page__content blockquote {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+/* Headings scaled down proportionally */
+.page__content h1 { font-size: 1.6em !important; }
+.page__content h2 { font-size: 1.3em !important; }
+.page__content h3 { font-size: 1.1em !important; }
+.page__content h4 { font-size: 1.0em !important; }
+
+/* Sidebar text */
+.author__name  { font-size: 1.0em !important; }
+.author__bio   { font-size: 0.85em !important; }
+.author__urls a { font-size: 0.85em !important; }
+
+/* Nav links */
+.greedy-nav a  { font-size: 0.8em !important; }
 
 /* ── Profile avatar: larger ── */
 .author__avatar img {
@@ -58,10 +86,10 @@ a:visited { color: #0645ad; }
   padding: 0 !important;
 }
 .news-box li {
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 1rem;
   border-bottom: 1px solid #f3f4f6;
-  font-size: 0.6rem;
-  line-height: 1;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
   margin: 0 !important;
 }
 .news-box li:last-child { border-bottom: none; }
