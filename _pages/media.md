@@ -27,8 +27,13 @@ Ranked 4th among 150+ participants from universities across Pakistan.
 The following coverage relates to the first-ever VR Classroom Field Experiment in Pakistan, conducted at [Information Technology University](https://itu.edu.pk/) through the Virtuality Labs.
 
 - **National TV** -- Research aired live on [ARY News](https://www.linkedin.com/posts/itu-metaverse-virtualreality-ugcPost-7177955223385108480-05So) covering the VR Classroom initiative at ITU Lahore.
+
 - **National TV** -- Research aired live on [Samaa TV](https://www.linkedin.com/posts/itu-metaverse-virtualreality-ugcPost-7176867458891345920-4ro_) covering immersive learning with VR.
+
 - **Print** -- Featured in [Daily Times](https://dailytimes.com.pk/1179316/itu-lahore-launches-first-virtual-reality-classes/): *"ITU Lahore Launches First Virtual Reality Classes"*.
+
 - **Online** -- Featured in [Academia Magazine](https://academiamag.com/news/itu-launches-vr-classes-for-immersive-learning/): *"ITU Launches VR Classes for Immersive Learning"*.
+
 - **Documentary** -- Covered in the [official ITU YouTube documentary](https://www.youtube.com/watch?v=S4Pxp9O4fdA): *"VR Classes at ITU | 1st time in Pakistan"*.
+
 - **Government** -- Project demonstrated live to the [Chief Minister of Punjab](https://www.linkedin.com/posts/ibrahimghaznavi_quest2-vr-xr-activity-7204106284541845504-Xiwn) during an official visit to ITU.
