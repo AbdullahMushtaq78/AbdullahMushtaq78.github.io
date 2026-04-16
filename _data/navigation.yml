@@ -1,13 +1,13 @@
 main:
   - title: "About"
-    url: /#about
+    url: /
   - title: "Publications"
-    url: /#publications
+    url: /publications/
   - title: "Experience"
-    url: /#experience
-  - title: "Education"
-    url: /#education
-  - title: "Honors & Media"
-    url: /#honors
+    url: /experience/
+  - title: "Services"
+    url: /services/
+  - title: "Media"
+    url: /media/
   - title: "CV"
-    url: /#cv
+    url: /cv/
