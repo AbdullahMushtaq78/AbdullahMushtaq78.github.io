@@ -3,21 +3,21 @@
 ---
 
 // ── Override MM variables BEFORE importing the theme ──
+$sans-serif        : "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+
 // $doc-font-size controls the base rem reference MM uses everywhere.
-// Default is 16. Dropping to 13 scales all em/rem-based type proportionally.
-$doc-font-size: 20;
+// Default is 16. 15.5 = slightly smaller than default but larger than before (was 13–15).
+$doc-font-size: 15.5;
 
-// Tighten the type scale slightly so headings aren't oversized
-$type-size-1 : 1.8em;
-$type-size-2 : 1.4em;
-$type-size-3 : 1.2em;
-$type-size-4 : 1.05em;
+// Type scale — roomier than before but still tighter than MM default
+$type-size-1 : 2.0em;
+$type-size-2 : 1.563em;
+$type-size-3 : 1.25em;
+$type-size-4 : 1.1em;
 $type-size-5 : 1em;
-$type-size-6 : 0.75em;
-
-
-
-
+$type-size-6 : 0.8em;
 
 @import "minimal-mistakes/skins/default"; // skin
 @import "minimal-mistakes"; // main styles
@@ -33,8 +33,6 @@ $type-size-6 : 0.75em;
 //   color: #444 !important;
 // }
 
-
-
 // /* ── Profile avatar ── */
 // .author__avatar img {
 //   max-width: 140px !important;
@@ -42,13 +40,13 @@ $type-size-6 : 0.75em;
 // }
 // .author__avatar { display: block; text-align: center; }
 
-/* ── Visited links ── */
+// /* ── Visited links ── */
 // a:visited { color: #0645ad; }
 
 /* ── Publication title: black ── */
 .pub-title-link {
   color: #111 !important;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
 }
 .pub-title-link:hover   { text-decoration: underline; color: #111 !important; }
@@ -67,13 +65,13 @@ $type-size-6 : 0.75em;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,.06);
 }
-.news-box::-webkit-scrollbar { width: 8px; }
+.news-box::-webkit-scrollbar { width: 4px; }
 .news-box::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
 .news-box ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
 .news-box li {
   padding: 0.45rem 1rem;
   border-bottom: 1px solid #f3f4f6;
-  font-size: 12px !important;
+  font-size: 13px !important;
   line-height: 1.5 !important;
   margin: 0 !important;
 }
