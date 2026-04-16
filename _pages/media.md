@@ -34,6 +34,6 @@ The following coverage relates to the first-ever VR Classroom Field Experiment i
 
 - **Online** -- Featured in [Academia Magazine](https://academiamag.com/news/itu-launches-vr-classes-for-immersive-learning/): *"ITU Launches VR Classes for Immersive Learning"*.
 
-- **Documentary** -- Covered in the [official ITU YouTube documentary](https://www.youtube.com/watch?v=S4Pxp9O4fdA): *"VR Classes at ITU | 1st time in Pakistan"*.
+- **Documentary** -- Covered in the [official ITU YouTube documentary](https://www.youtube.com/watch?v=S4Pxp9O4fdA): *"VR Classes at ITU - 1st time in Pakistan"*.
 
 - **Government** -- Project demonstrated live to the [Chief Minister of Punjab](https://www.linkedin.com/posts/ibrahimghaznavi_quest2-vr-xr-activity-7204106284541845504-Xiwn) during an official visit to ITU.
