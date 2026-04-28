@@ -9,7 +9,8 @@ classes: wide
 <a class="pub-title-link" href="http://arxiv.org/abs/2505.09595">**WorldView-Bench: A Benchmark for Evaluating Global Cultural Perspectives in Large Language Models**</a>\\
 **Abdullah Mushtaq**, Imran Taj, Rafay Naeem, Ibrahim Ghaznavi, Junaid Qadir\\
 *Journal of Artificial Intelligence Research (JAIR), 2026, Volume: 85, Pages: 28. Q1, H-index: 143, Acceptance Rate: 12.6%*\\
-\[[DOI](10.1613/jair.1.19001)\] \[[arXiv](http://arxiv.org/abs/2505.09595)\] \[[Code](https://github.com/AbdullahMushtaq78/WorldView-Bench)\] 
+*DOI: 10.1613/jair.1.19001*\\
+\[[arXiv](http://arxiv.org/abs/2505.09595)\] \[[Code](https://github.com/AbdullahMushtaq78/WorldView-Bench)\] 
 
 ---
 
