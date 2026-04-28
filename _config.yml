@@ -1,8 +1,7 @@
 title: Abdullah Mushtaq
 email: abdullahmushtaq0070@gmail.com
 description: >-
-  Academic portfolio of Abdullah Mushtaq — AI researcher working on LLM inference,
-  multi-agent systems, benchmarking, and alignment.
+  Academic portfolio of Abdullah Mushtaq — AI researcher working on NLP, LLM inference, multi-agent systems, benchmarking, and alignment.
 url: "https://abdullahmushtaq78.github.io"
 baseurl: ""
 
@@ -28,6 +27,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 author:
   name   : "Abdullah Mushtaq"
@@ -47,6 +47,9 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=jOJB8tkAAAAJ&hl=en&oi=ao"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0009-0009-4267-8470"
     - label: "X / Twitter"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/AbdullahInSpace"
@@ -58,7 +61,7 @@ footer:
       url: "https://github.com/AbdullahMushtaq78"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/abdullah-mushtaq78/"
+      url: "https://www.linkedin.com/in/abdullah-mushtaq78"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=jOJB8tkAAAAJ&hl=en&oi=ao"
