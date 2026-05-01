@@ -17,7 +17,7 @@ classes: wide
 <a class="pub-title-link" href="https://arxiv.org/abs/2602.21226">**IslamicLegalBench: Evaluating LLMs Knowledge and Reasoning of Islamic Law Across 1,200 Years of Islamic Pluralist Legal Traditions**</a>\\
 Ezieddin Elmahjub, Junaid Qadir, **Abdullah Mushtaq**, Rafay Naeem, Ibrahim Ghaznavi, Waqar Iqbal\\
 *Artificial Intelligence and Law -- Under Review, 2026*\\
-\[[arXiv](https://arxiv.org/abs/2602.21226)\]
+\[[arXiv](https://arxiv.org/abs/2602.21226)\] \[[Leaderboard](https://huggingface.co/spaces/AbdullahMushtaq/IslamicLegalBench-Leaderboard)\]
 
 ---
 
