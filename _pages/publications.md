@@ -6,7 +6,7 @@ permalink: /publications/
 classes: wide
 ---
 
-> For the most up-to-date list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=jOJB8tkAAAAJ&hl=en&oi=ao).
+> For the most up-to-date list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=jOJB8tkAAAAJ&view_op=list_works&sortby=pubdate).
 
 <a class="pub-title-link" href="http://arxiv.org/abs/2505.09595">**WorldView-Bench: A Benchmark for Evaluating Global Cultural Perspectives in Large Language Models**</a>\\
 **Abdullah Mushtaq**, Imran Taj, Rafay Naeem, Ibrahim Ghaznavi, Junaid Qadir\\
