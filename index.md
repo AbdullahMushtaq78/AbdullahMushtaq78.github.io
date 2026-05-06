@@ -35,7 +35,7 @@ I hold a B.S. in Computer Science from [Information Technology University](https
 
 <div class="news-box">
 <ul>
-  <li><strong>04/2026</strong> &nbsp; Accepted to the <strong>Ph.D. in Computer Science</strong> program at Tulane University, New Orleans, LA, USA.</a>.</li>
+  <li><strong>04/2026</strong> &nbsp; Accepted to the <strong>Ph.D. in Computer Science</strong> program at Tulane University, New Orleans, LA, USA.</li>
   <li><strong>25/01/2026</strong> &nbsp; <a href="http://arxiv.org/abs/2505.09595">WorldView-Bench</a> accepted at the <strong>Journal of Artificial Intelligence Research (JAIR)</strong>, Q1, H-index: 143, acceptance rate 12.6%.</li>
   <li><strong>30/11/2025</strong> &nbsp; <a href="https://arxiv.org/abs/2602.21226">IslamicLegalBench</a> submitted to <em>Artificial Intelligence and Law</em>, evaluating LLM reasoning across 1,200 years of Islamic jurisprudence.</li>
   <li><strong>08/2025</strong> &nbsp; Joined <a href="https://www.qu.edu.qa/">Qatar University</a> as Visiting Research Assistant working on LLM reasoning and agentic AI.</li>
