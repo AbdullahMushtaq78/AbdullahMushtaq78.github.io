@@ -44,9 +44,9 @@ I hold a B.S. in Computer Science from [Information Technology University](https
   <li><strong>04/2025</strong> &nbsp; Two papers accepted at <strong>IEEE EDUCON 2025</strong>: <a href="https://arxiv.org/abs/2501.01205">MASC</a> and <a href="https://arxiv.org/abs/2501.03259">Cultural Bias Auditing in LLMs</a>.</li>
   <li><strong>05/2025</strong> &nbsp; Joined <a href="https://www.hbku.edu.qa/">Hamad Bin Khalifa University (HBKU)</a> as Research Assistant on Agentic AI and LLMs.</li>
   <li><strong>07/2024</strong> &nbsp; Joined <a href="https://www.zu.ac.ae/">Zayed University</a>, Abu Dhabi as Research Assistant on Large Language Models under <a href="https://www.cs.ox.ac.uk/people/imran.hashmi/">Imran Hashmi (Oxford)</a>.</li>
+  <li><strong>25/07/2024</strong> &nbsp; Graduated in the top 5% of the class on the Dean's Honor List, ITU Lahore. Specialization GPA: 3.83/4.0.</li>
   <li><strong>2024</strong> &nbsp; Research on VR Classrooms aired live on <a href="https://www.linkedin.com/posts/itu-metaverse-virtualreality-ugcPost-7177955223385108480-05So">ARY News</a> and <a href="https://www.linkedin.com/posts/itu-metaverse-virtualreality-ugcPost-7176867458891345920-4ro_">Samaa TV</a>; featured in <a href="https://dailytimes.com.pk/1179316/itu-lahore-launches-first-virtual-reality-classes/">Daily Times</a> and <a href="https://academiamag.com/news/itu-launches-vr-classes-for-immersive-learning/">Academia Magazine</a>.</li>
   <li><strong>2023--24</strong> &nbsp; Awarded <strong>NGIRI 2023--24</strong> national ICT research grant (IGNITE) for <em>"Harnessing Mixed Reality and Drones for Agriculture using Generative AI"</em>.</li>
-  <li><strong>2024</strong> &nbsp; Graduated in the top 5% of the class on the Dean's Honor List, ITU Lahore. Specialization GPA: 3.83/4.0.</li>
   <li><strong>2020--24</strong> &nbsp; Recipient of the <strong>HEC Ehsaas fully-funded undergraduate scholarship</strong>, Higher Education Commission, Pakistan.</li>
 </ul>
 </div>
