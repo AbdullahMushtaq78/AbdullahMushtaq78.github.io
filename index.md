@@ -7,7 +7,9 @@ classes: wide
 
 ## About Me
 
-I am an upcoming PhD Computer Science student at Tulane University (Fall 2026). Currently, I am working as a Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar, supervised by [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/) (Harvard & Qatar University) and [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/). My core research interests span LLM inference and benchmarking, dynamic multi-agent systems, agentic planning, alignment, and reducing hallucination and sycophancy in large language models. I also work on reinforcement learning for LLMs, world models, and multimodal deep learning.
+I am an upcoming PhD Computer Science student at Tulane University (Fall 2026). 
+
+Currently, I am working as a Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar, supervised by [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/) (Harvard & Qatar University) and [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/). My core research interests span LLM inference and benchmarking, dynamic multi-agent systems, agentic planning, alignment, and reducing hallucination and sycophancy in large language models. I also work on reinforcement learning for LLMs, world models, and multimodal deep learning.
 
 In past, I have done research collaborations with internationally recognized institutions including [Oxford](https://www.ox.ac.uk/), [Weill Cornell Medicine](https://weill.cornell.edu/), [Imperial College London](https://www.imperial.ac.uk/), [Zayed University](https://www.zu.ac.ae/), [Qatar University](https://www.qu.edu.qa/), [Copenhagen Business School](https://www.cbs.dk/), [LUMS](https://lums.edu.pk/), and [ITU Lahore](https://itu.edu.pk/). I have authored multiple peer-reviewed publications at top-tier venues including [JAIR](https://www.jair.org/) (Q1, H-index: 143) and [NeurIPS 2025](https://neurips.cc/), with additional work under review at *Artificial Intelligence and Law*.
 
@@ -16,7 +18,7 @@ I hold a B.S. in Computer Science from [Information Technology University](https
 ---
 
 ## Career
-- **Aug. 2026 ~** &nbsp; Incoming Research Assistant at Tulane University (PI: [Aron Cullota](https://www.cs.tulane.edu//~aculotta/)), New Orleans, USA
+- **Aug. 2026 ~** &nbsp; Incoming Research Assistant at Tulane University (PI: [Aron Culotta](https://www.cs.tulane.edu//~aculotta/)), New Orleans, USA
 - **Aug. 2025 ~ Present** &nbsp; Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar (PIs: [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/), Harvard & Qatar University; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
 - **May 2025 ~ Aug. 2025** &nbsp; Research Assistant (remote) at [Hamad Bin Khalifa University (HBKU)](https://www.hbku.edu.qa/), Doha, Qatar
 - **Jul. 2024 ~ Jul. 2025** &nbsp; Research Assistant at [Zayed University](https://www.zu.ac.ae/), Abu Dhabi, UAE (supervised by [Imran Hashmi](https://www.cs.ox.ac.uk/people/imran.hashmi/), Oxford; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University; [Imran Taj](https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_interdisciplinary_studies/faculty_and_staff/_profiles/muhammad_imran_taj), Zayed University)
