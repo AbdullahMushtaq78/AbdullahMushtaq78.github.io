@@ -1,7 +1,7 @@
 title: Abdullah Mushtaq
 email: abdullahmushtaq0070@gmail.com
 description: >-
-  Academic portfolio of Abdullah Mushtaq — AI researcher working on NLP, LLM inference, multi-agent systems, benchmarking, and alignment.
+  Academic portfolio of Abdullah Mushtaq — Upcoming PhD at Tulane, Researcher working on NLP, LLM inference, multi-agent systems, benchmarking, and alignment.
 url: "https://abdullahmushtaq78.github.io"
 baseurl: ""
 
@@ -32,7 +32,7 @@ plugins:
 author:
   name   : "Abdullah Mushtaq"
   avatar : "/assets/images/bio-photo.WEBP"
-  bio    : "Visiting Research Assistant, Qatar University"
+  bio    : "Upcoming PhD (Tulane) | Visiting Research Assistant, Qatar University"
   location: "Doha, Qatar"
   links:
     - label: "Email"
