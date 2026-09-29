@@ -8,17 +8,17 @@ classes: wide
 
 ## Awards & Honors
 
-**NGIRI 2023--24 National Research Grant** -- IGNITE, Federal ICT R&D Fund, 2023--2024\\
-Awarded 100,000 PKR for *"Harnessing Mixed Reality and Drones for Agriculture using Generative AI"*, selected among outstanding final-year projects across Pakistani universities.
-
-**HEC Ehsaas Fully-Funded Undergraduate Scholarship** -- Higher Education Commission, Pakistan, 2020--2024\\
-Nationally competitive, fully-funded scholarship awarded on the basis of academic excellence.
-
 **Dean's Honor List -- Top 5% of Class** -- Information Technology University, 2024\\
 Specialization GPA: 3.83/4.0. Merit Scholarship holder 2020--2024.
 
+**NGIRI 2023--24 National Research Grant** -- IGNITE, Federal ICT R&D Fund, 2023--2024\\
+Awarded 100,000 PKR for *"Harnessing Mixed Reality and Drones for Agriculture using Generative AI"*, selected among outstanding final-year projects across Pakistani universities.
+
 **4th Place -- Google Competitive Programming Competition** -- Google Developer Student Club, ITU, 2022\\
 Ranked 4th among 150+ participants from universities across Pakistan.
+
+**HEC Ehsaas Fully-Funded Undergraduate Scholarship** -- Higher Education Commission, Pakistan, 2020--2024\\
+Nationally competitive, fully-funded scholarship awarded on the basis of academic excellence.
 
 ---
 

@@ -32,6 +32,13 @@ Ezieddin Elmahjub, Junaid Qadir, **Abdullah Mushtaq**, Rafay Naeem, Ibrahim Ghaz
 
 ---
 
+<a class="pub-title-link" href="https://arxiv.org/abs/2509.17240">**Can Agents Judge Systematic Reviews Like Humans? Evaluating SLRs with LLM-based Multi-Agent System**</a>\\
+**Abdullah Mushtaq**, Muhammad Rafay Naeem, Ibrahim Ghaznavi, Alaa Abd-alrazaq, Aliya Tabassum, Junaid Qadir\\
+*Preprint -- In Progress. Collaboration with Weill Cornell Medicine & Qatar University*\\
+\[[arXiv](https://arxiv.org/abs/2509.17240)\]
+
+---
+
 <a class="pub-title-link" href="https://arxiv.org/abs/2501.01205">**Harnessing Multi-Agent LLMs for Complex Engineering Problem-Solving: A Framework for Senior Design Projects**</a>\\
 **Abdullah Mushtaq**, Rafay Naeem, Ibrahim Ghaznavi, M. Imran Taj, Imran Hashmi, Junaid Qadir\\
 *IEEE Global Engineering Education Conference (EDUCON), 2025*\\
@@ -43,10 +50,3 @@ Ezieddin Elmahjub, Junaid Qadir, **Abdullah Mushtaq**, Rafay Naeem, Ibrahim Ghaz
 **Abdullah Mushtaq**, Rafay Naeem, M. Imran Taj, Ibrahim Ghaznavi, Junaid Qadir\\
 *IEEE Global Engineering Education Conference (EDUCON), 2025*\\
 \[[arXiv](https://arxiv.org/abs/2501.03259)\]
-
----
-
-<a class="pub-title-link" href="https://arxiv.org/abs/2509.17240">**Can Agents Judge Systematic Reviews Like Humans? Evaluating SLRs with LLM-based Multi-Agent System**</a>\\
-**Abdullah Mushtaq**, Muhammad Rafay Naeem, Ibrahim Ghaznavi, Alaa Abd-alrazaq, Aliya Tabassum, Junaid Qadir\\
-*Preprint -- In Progress. Collaboration with Weill Cornell Medicine & Qatar University*\\
-\[[arXiv](https://arxiv.org/abs/2509.17240)\]
