@@ -28,7 +28,6 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-redirect-from
 
 author:
   name   : "Abdullah Mushtaq"
@@ -77,10 +76,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
