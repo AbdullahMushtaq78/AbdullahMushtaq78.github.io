@@ -7,19 +7,17 @@ classes: wide
 
 ## About Me
 
-I am an upcoming PhD Computer Science student at Tulane University (Fall 2026). 
+I am a Ph.D. student in Computer Science at [Tulane University](https://tulane.edu/), advised by [Aron Culotta](https://www.cs.tulane.edu/~aculotta/). My Ph.D. research focuses on applied NLP and large language models, with an emphasis on evaluation and benchmarking.
 
-Currently, I am working as a Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar, supervised by [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/) (Harvard & Qatar University) and [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/). My core research interests span LLM inference and benchmarking, dynamic multi-agent systems, agentic planning, alignment, and reducing hallucination and sycophancy in large language models. I also work on reinforcement learning for LLMs, world models, and multimodal deep learning.
+**Research interests:** Natural Language Processing · Large Language Models · Multi-Agent Systems · Alignment and Hallucination · AI4Science
 
-In past, I have done research collaborations with internationally recognized institutions including [Oxford](https://www.ox.ac.uk/), [Weill Cornell Medicine](https://weill.cornell.edu/), [Imperial College London](https://www.imperial.ac.uk/), [Zayed University](https://www.zu.ac.ae/), [Qatar University](https://www.qu.edu.qa/), [Copenhagen Business School](https://www.cbs.dk/), [LUMS](https://lums.edu.pk/), and [ITU Lahore](https://itu.edu.pk/). I have authored multiple peer-reviewed publications at top-tier venues including [JAIR](https://www.jair.org/) (Q1, H-index: 143) and [NeurIPS 2025](https://neurips.cc/), with additional work under review at *Artificial Intelligence and Law*.
-
-I hold a B.S. in Computer Science from [Information Technology University](https://itu.edu.pk/), Lahore (2020--2024), graduating in the top 5% on the Dean's Honor List with a specialization GPA of 3.83/4.0. I am a recipient of the nationally competitive HEC Ehsaas fully-funded undergraduate scholarship and the NGIRI 2023--24 national ICT research grant (IGNITE). During my studies, I served as a Teaching Assistant for three courses, supporting 250+ students.
+Before Tulane, I was a Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), working with [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/) and [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), and before that a Research Assistant at [Zayed University](https://www.zu.ac.ae/). I have collaborated with researchers at Oxford, Weill Cornell Medicine, and Imperial College London, and my work has been published in the [Journal of Artificial Intelligence Research](https://www.jair.org/) and [Artificial Intelligence and Law](https://link.springer.com/journal/10506), and at the [NeurIPS 2025](https://neurips.cc/) MusIML Workshop. I received my B.S. in Computer Science from [Information Technology University](https://itu.edu.pk/), Lahore, in 2024, graduating in the top 5% of my class.
 
 ---
 
 ## Career
-- **Aug. 2026 ~** &nbsp; Incoming Research Assistant at Tulane University (PI: [Aron Culotta](https://www.cs.tulane.edu//~aculotta/)), New Orleans, USA
-- **Aug. 2025 ~ Present** &nbsp; Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar (PIs: [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/), Harvard & Qatar University; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
+- **Aug. 2026 ~ Present** &nbsp; Ph.D. Student in Computer Science at [Tulane University](https://tulane.edu/), New Orleans, USA (Advisor: [Aron Culotta](https://www.cs.tulane.edu/~aculotta/))
+- **Aug. 2025 ~ 2026** &nbsp; Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar (PIs: [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/), Harvard & Qatar University; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
 - **May 2025 ~ Aug. 2025** &nbsp; Research Assistant (remote) at [Hamad Bin Khalifa University (HBKU)](https://www.hbku.edu.qa/), Doha, Qatar
 - **Jul. 2024 ~ Jul. 2025** &nbsp; Research Assistant at [Zayed University](https://www.zu.ac.ae/), Abu Dhabi, UAE (supervised by [Imran Hashmi](https://www.cs.ox.ac.uk/people/imran.hashmi/), Oxford; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University; [Imran Taj](https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_interdisciplinary_studies/faculty_and_staff/_profiles/muhammad_imran_taj), Zayed University)
 - **Aug. 2024 ~ Nov. 2024** &nbsp; Research Assistant at [LUMS](https://lums.edu.pk/) in collaboration with [Stanford Research Institute](https://www.csl.sri.com/people/gehani/), Lahore, Pakistan
@@ -35,9 +33,10 @@ I hold a B.S. in Computer Science from [Information Technology University](https
 
 <div class="news-box">
 <ul>
+  <li><strong>17/09/2026</strong> &nbsp; <a href="https://link.springer.com/article/10.1007/s10506-026-09535-4">IslamicLegalBench</a> accepted and published in <strong>Artificial Intelligence and Law</strong> (Springer), evaluating LLM knowledge and reasoning across 1,200 years of Islamic legal traditions.</li>
+  <li><strong>05/08/2026</strong> &nbsp; Moved to New Orleans, USA to start my Ph.D. at Tulane University.</li>
   <li><strong>04/2026</strong> &nbsp; Accepted to the <strong>Ph.D. in Computer Science</strong> program at Tulane University, New Orleans, LA, USA.</li>
   <li><strong>25/01/2026</strong> &nbsp; <a href="http://arxiv.org/abs/2505.09595">WorldView-Bench</a> accepted at the <strong>Journal of Artificial Intelligence Research (JAIR)</strong>, Q1, H-index: 143, acceptance rate 12.6%.</li>
-  <li><strong>30/11/2025</strong> &nbsp; <a href="https://arxiv.org/abs/2602.21226">IslamicLegalBench</a> submitted to <em>Artificial Intelligence and Law</em>, evaluating LLM reasoning across 1,200 years of Islamic jurisprudence.</li>
   <li><strong>08/2025</strong> &nbsp; Joined <a href="https://www.qu.edu.qa/">Qatar University</a> as Visiting Research Assistant working on LLM reasoning and agentic AI.</li>
   <li><strong>10/2025</strong> &nbsp; <a href="https://arxiv.org/abs/2510.24438">Can LLMs Write Faithfully?</a> published at <strong>NeurIPS 2025</strong>, Muslims in Machine Learning (MusIML) Workshop.</li>
   <li><strong>2025</strong> &nbsp; Served as a peer reviewer at <a href="https://neurips.cc/">NeurIPS 2025</a>.</li>

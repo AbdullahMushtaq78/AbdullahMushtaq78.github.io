@@ -8,18 +8,20 @@ classes: wide
 
 > For the most up-to-date list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=jOJB8tkAAAAJ&view_op=list_works&sortby=pubdate).
 
+<a class="pub-title-link" href="https://link.springer.com/article/10.1007/s10506-026-09535-4">**IslamicLegalBench: Evaluating LLMs Knowledge and Reasoning of Islamic Law Across 1,200 Years of Islamic Pluralist Legal Traditions**</a>\\
+Ezieddin Elmahjub, Junaid Qadir, **Abdullah Mushtaq**, Rafay Naeem, Ibrahim Ghaznavi, Waleed Iqbal\\
+*Artificial Intelligence and Law (Springer), 2026. Open Access*\\
+*DOI: 10.1007/s10506-026-09535-4*\\
+*Received: 30 November 2025 · Accepted: 3 August 2026 · Published: 17 September 2026*\\
+\[[Springer](https://link.springer.com/article/10.1007/s10506-026-09535-4)\] \[[arXiv](https://arxiv.org/abs/2602.21226)\] \[[Leaderboard](https://huggingface.co/spaces/AbdullahMushtaq/IslamicLegalBench-Leaderboard)\]
+
+---
+
 <a class="pub-title-link" href="http://arxiv.org/abs/2505.09595">**WorldView-Bench: A Benchmark for Evaluating Global Cultural Perspectives in Large Language Models**</a>\\
 **Abdullah Mushtaq**, Imran Taj, Rafay Naeem, Ibrahim Ghaznavi, Junaid Qadir\\
 *Journal of Artificial Intelligence Research (JAIR), 2026, Volume: 85, Pages: 28. Q1, H-index: 143, Acceptance Rate: 12.6%*\\
 *DOI: 10.1613/jair.1.19001*\\
 \[[arXiv](http://arxiv.org/abs/2505.09595)\] \[[Code](https://github.com/AbdullahMushtaq78/WorldView-Bench)\] 
-
----
-
-<a class="pub-title-link" href="https://arxiv.org/abs/2602.21226">**IslamicLegalBench: Evaluating LLMs Knowledge and Reasoning of Islamic Law Across 1,200 Years of Islamic Pluralist Legal Traditions**</a>\\
-Ezieddin Elmahjub, Junaid Qadir, **Abdullah Mushtaq**, Rafay Naeem, Ibrahim Ghaznavi, Waleed Iqbal\\
-*Artificial Intelligence and Law -- Under Review, 2026*\\
-\[[arXiv](https://arxiv.org/abs/2602.21226)\] \[[Leaderboard](https://huggingface.co/spaces/AbdullahMushtaq/IslamicLegalBench-Leaderboard)\]
 
 ---
 

@@ -1,7 +1,7 @@
 title: Abdullah Mushtaq
-email: abdullahmushtaq0070@gmail.com
+email: amushtaq1@tulane.edu
 description: >-
-  Academic portfolio of Abdullah Mushtaq — Upcoming PhD at Tulane, Researcher working on NLP, LLM inference, multi-agent systems, benchmarking, and alignment.
+  Academic portfolio of Abdullah Mushtaq — Ph.D. student in Computer Science at Tulane University working on applied NLP, large language models, and evaluation and benchmarking.
 url: "https://abdullahmushtaq78.github.io"
 baseurl: ""
 
@@ -15,7 +15,7 @@ search: false
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
-timezone: Asia/Qatar
+timezone: America/Chicago
 
 include:
   - _pages
@@ -32,12 +32,12 @@ plugins:
 author:
   name   : "Abdullah Mushtaq"
   avatar : "/assets/images/bio-photo.WEBP"
-  bio    : "Upcoming PhD (Tulane) -- Visiting RA, Qatar University"
-  location: "Doha, Qatar"
+  bio    : "Ph.D. Student in Computer Science at Tulane University"
+  location: "New Orleans, LA, USA"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:abdullahmushtaq0070@gmail.com"
+      url: "mailto:amushtaq1@tulane.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/AbdullahMushtaq78"
