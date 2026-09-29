@@ -20,6 +20,10 @@ Personal academic website built with [Jekyll](https://jekyllrb.com/) and the [Mi
 ```
 ├── _config.yml          # site settings, author info, sidebar links
 ├── _data/navigation.yml # top nav links
+├── _includes/
+│   ├── head/custom.html              # favicon, fonts, SEO data
+│   ├── footer/custom.html            # loads the publications script
+│   └── publications-filter.html      # turns publications.md into filterable cards
 ├── _pages/              # site pages
 ├── assets/
 │   ├── css/main.scss    # custom styles + MM theme imports
@@ -30,7 +34,7 @@ Personal academic website built with [Jekyll](https://jekyllrb.com/) and the [Mi
 
 ## Updating content
 
-- **New publication:** add an entry to `_pages/publications.md`
+- **New publication:** copy the template at the top of `_pages/publications.md` into the list (newest first, preprints last). `Type` (Journal, Conference, or Preprint) decides which filter button it appears under.
 - **New news item:** add a `<li>` in the news box in `index.md`
 - **Update CV:** replace `assets/pdf/cv.pdf`
 - **Profile photo:** replace `assets/images/bio-photo.WEBP`

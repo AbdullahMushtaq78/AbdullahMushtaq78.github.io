@@ -1,0 +1,200 @@
+<!--
+  Turns the markdown papers on the Publications page into filterable cards.
+  Each paper in _pages/publications.md is a "### Title" heading followed by a
+  list of "**Label:** value" lines. Runs inline right after the page content,
+  so the cards are built before the page is first painted.
+-->
+<script>
+(function () {
+  var content = document.querySelector('.page__content');
+  if (!content) return;
+
+  var FILTERS = [
+    { key: 'all', label: 'All' },
+    { key: 'journal', label: 'Journal' },
+    { key: 'conference', label: 'Conference' },
+    { key: 'preprint', label: 'Preprints' }
+  ];
+
+  var LINK_ICONS = [
+    [/code|github/i, 'fab fa-github'],
+    [/arxiv|paper|preprint/i, 'fas fa-file-alt'],
+    [/pdf/i, 'fas fa-file-pdf'],
+    [/leaderboard/i, 'fas fa-trophy'],
+    [/data/i, 'fas fa-database'],
+    [/slides|poster/i, 'fas fa-chalkboard'],
+    [/video|talk/i, 'fab fa-youtube'],
+    [/springer|journal|publisher|doi|acm|ieee/i, 'fas fa-book-open'],
+    [/project|website|demo/i, 'fas fa-globe']
+  ];
+
+  function normalizeType(text) {
+    var t = (text || '').trim().toLowerCase();
+    if (/^journal/.test(t)) return 'journal';
+    if (/^(conf|workshop)/.test(t)) return 'conference';
+    if (/^preprint/.test(t)) return 'preprint';
+    return 'other';
+  }
+
+  // Reads "- **Label:** value" items into { label: node holding just the value }.
+  function readFields(list) {
+    var fields = {};
+    Array.prototype.forEach.call(list.children, function (li) {
+      var item = li.children.length === 1 && li.firstElementChild.tagName === 'P' ? li.firstElementChild : li;
+      var label = item.firstElementChild;
+      if (!label || label.tagName !== 'STRONG') return;
+      if (item.firstChild !== label && item.firstChild.textContent.trim() !== '') return;
+
+      var key = label.textContent.replace(/:\s*$/, '').trim().toLowerCase();
+      var value = item.cloneNode(true);
+      value.removeChild(value.firstElementChild);
+      var first = value.firstChild;
+      if (first && first.nodeType === 3) first.textContent = first.textContent.replace(/^\s*:?\s*/, '');
+      fields[key] = value;
+    });
+    return fields;
+  }
+
+  function isPaper(heading) {
+    var list = heading.nextElementSibling;
+    return heading.tagName === 'H3' && list && list.tagName === 'UL' && 'type' in readFields(list);
+  }
+
+  function el(tag, className, html) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (html != null) node.innerHTML = html;
+    return node;
+  }
+
+  function buildCard(heading, fields) {
+    var type = normalizeType(fields.type && fields.type.textContent);
+    var titleLink = heading.querySelector('a:not(.header-link)');
+    var venueText = fields.venue ? fields.venue.textContent : '';
+    var yearMatch = (fields.year ? fields.year.textContent : venueText).match(/(19|20)\d{2}/);
+
+    var card = el('article', 'pub-card');
+    card.dataset.type = type;
+    if (heading.id) card.id = heading.id;
+
+    var badge = el('div', 'pub-card__badge');
+    badge.appendChild(el('span', 'pub-card__badge-name')).textContent = fields.badge ? fields.badge.textContent.trim() : type;
+    if (yearMatch) badge.appendChild(el('span', 'pub-card__badge-year')).textContent = yearMatch[0];
+    card.appendChild(badge);
+
+    var body = el('div', 'pub-card__body');
+    var title = el('h3', 'pub-card__title');
+    if (titleLink) {
+      var a = el('a');
+      a.href = titleLink.href;
+      a.textContent = titleLink.textContent;
+      title.appendChild(a);
+    } else {
+      title.textContent = heading.textContent;
+    }
+    body.appendChild(title);
+
+    if (fields.authors) body.appendChild(el('p', 'pub-card__authors', fields.authors.innerHTML));
+    if (fields.venue) body.appendChild(el('p', 'pub-card__venue', fields.venue.innerHTML));
+
+    var details = [];
+    if (fields.details) details.push(fields.details.innerHTML);
+    if (fields.doi) {
+      var doi = fields.doi.textContent.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//, '');
+      var doiLink = el('a');
+      doiLink.href = 'https://doi.org/' + doi;
+      doiLink.textContent = doi;
+      details.push('DOI: ' + doiLink.outerHTML);
+    }
+    if (details.length) body.appendChild(el('p', 'pub-card__details', details.join(' · ')));
+
+    var links = fields.links ? fields.links.querySelectorAll('a') : [];
+    if (links.length) {
+      var row = el('div', 'pub-card__links');
+      Array.prototype.forEach.call(links, function (source) {
+        var link = el('a', 'pub-link');
+        link.href = source.href;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        var icon = LINK_ICONS.filter(function (pair) { return pair[0].test(source.textContent); })[0];
+        link.appendChild(el('i', icon ? icon[1] : 'fas fa-link')).setAttribute('aria-hidden', 'true');
+        link.appendChild(document.createTextNode(source.textContent));
+        row.appendChild(link);
+      });
+      body.appendChild(row);
+    }
+
+    card.appendChild(body);
+    return card;
+  }
+
+  var headings = Array.prototype.filter.call(content.querySelectorAll('h3'), isPaper);
+  if (!headings.length) return;
+
+  var list = el('div', 'pub-list');
+  var cards = headings.map(function (heading) {
+    var source = heading.nextElementSibling;
+    var card = buildCard(heading, readFields(source));
+    list.appendChild(card);
+    return card;
+  });
+
+  var counts = { all: cards.length };
+  cards.forEach(function (card) { counts[card.dataset.type] = (counts[card.dataset.type] || 0) + 1; });
+
+  var bar = el('div', 'pub-filters');
+  bar.setAttribute('role', 'group');
+  bar.setAttribute('aria-label', 'Filter publications');
+  var status = el('p', 'pub-sr-only');
+  status.setAttribute('aria-live', 'polite');
+
+  function apply(key) {
+    var shown = 0;
+    Array.prototype.forEach.call(bar.children, function (button) {
+      var active = button.dataset.filter === key;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    cards.forEach(function (card) {
+      var visible = key === 'all' || card.dataset.type === key;
+      card.hidden = !visible;
+      card.classList.remove('is-entering');
+      if (visible) {
+        void card.offsetWidth;
+        card.style.animationDelay = (shown * 40) + 'ms';
+        card.classList.add('is-entering');
+        shown += 1;
+      }
+    });
+    status.textContent = 'Showing ' + shown + ' of ' + cards.length + ' publications';
+  }
+
+  FILTERS.forEach(function (filter) {
+    if (!counts[filter.key]) return;
+    var button = el('button', 'pub-filter');
+    button.type = 'button';
+    button.dataset.filter = filter.key;
+    button.appendChild(document.createTextNode(filter.label));
+    button.appendChild(el('span', 'pub-filter__count')).textContent = counts[filter.key];
+    button.addEventListener('click', function () { apply(filter.key); });
+    bar.appendChild(button);
+  });
+
+  headings[0].parentNode.insertBefore(bar, headings[0]);
+  bar.parentNode.insertBefore(status, headings[0]);
+  bar.parentNode.insertBefore(list, headings[0]);
+  headings.forEach(function (heading) {
+    var source = heading.nextElementSibling;
+    var next = source.nextElementSibling;
+    if (next && next.tagName === 'HR') next.parentNode.removeChild(next);
+    source.parentNode.removeChild(source);
+    heading.parentNode.removeChild(heading);
+  });
+
+  Array.prototype.forEach.call(bar.children, function (button) {
+    var active = button.dataset.filter === 'all';
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+})();
+</script>
