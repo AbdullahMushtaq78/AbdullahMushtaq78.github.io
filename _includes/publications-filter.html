@@ -79,7 +79,10 @@
 
     var badge = el('div', 'pub-card__badge');
     badge.appendChild(el('span', 'pub-card__badge-name')).textContent = fields.badge ? fields.badge.textContent.trim() : type;
-    if (yearMatch) badge.appendChild(el('span', 'pub-card__badge-year')).textContent = yearMatch[0];
+    if (yearMatch) {
+      badge.appendChild(document.createTextNode(' '));
+      badge.appendChild(el('span', 'pub-card__badge-year')).textContent = yearMatch[0];
+    }
     card.appendChild(badge);
 
     var body = el('div', 'pub-card__body');
@@ -158,6 +161,7 @@
     cards.forEach(function (card) {
       var visible = key === 'all' || card.dataset.type === key;
       card.hidden = !visible;
+      card.style.display = visible ? '' : 'none';
       card.classList.remove('is-entering');
       if (visible) {
         void card.offsetWidth;
@@ -174,8 +178,8 @@
     var button = el('button', 'pub-filter');
     button.type = 'button';
     button.dataset.filter = filter.key;
-    button.appendChild(document.createTextNode(filter.label));
-    button.appendChild(el('span', 'pub-filter__count')).textContent = counts[filter.key];
+    button.appendChild(document.createTextNode(filter.label + ' '));
+    button.appendChild(el('span', 'pub-filter__count')).textContent = '(' + counts[filter.key] + ')';
     button.addEventListener('click', function () { apply(filter.key); });
     bar.appendChild(button);
   });
