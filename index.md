@@ -7,7 +7,7 @@ classes: wide
 
 ## About Me
 
-I am a Ph.D. student in Computer Science at [Tulane University](https://tulane.edu/), advised by [Aron Culotta](https://www.cs.tulane.edu/~aculotta/). My Ph.D. research focuses on applied NLP and large language models, with an emphasis on training, fine-tuning, evaluation, and benchmarking.
+I am a Ph.D. student in Computer Science at [Tulane University](https://tulane.edu/), advised by [Aron Culotta](https://www.cs.tulane.edu/~aculotta/). My Ph.D. research focuses on applied NLP and large language models, with an emphasis on training, fine-tuning, evaluation, and benchmarking. As a Graduate Research Assistant in the TulaneAI Group, I work on the NSF-HCC project *Socio-linguistic modeling to understand the long-term dynamics of news engagement in online media*, combining NLP, LLMs, and causal inference to study how people change their political views and engage with others online.
 
 **Research interests:** Natural Language Processing · Large Language Models · Multi-Agent Systems · Alignment and Hallucination · AI4Science
 
@@ -16,7 +16,7 @@ Before Tulane, I was a Research Assistant at [Information Technology University]
 ---
 
 ## Career
-- **Aug. 2026 ~ Present** &nbsp; Ph.D. Student in Computer Science at [Tulane University](https://tulane.edu/), New Orleans, USA (Advisor: [Aron Culotta](https://www.cs.tulane.edu/~aculotta/))
+- **Aug. 2026 ~ Present** &nbsp; Ph.D. Student & Graduate Research Assistant, TulaneAI Group, [Tulane University](https://tulane.edu/), New Orleans, USA (Advisor: [Aron Culotta](https://www.cs.tulane.edu/~aculotta/)) -- NSF-HCC project on socio-linguistic modeling of long-term news engagement in online media
 - **Dec. 2025 ~ Jul. 2026** &nbsp; Research Assistant at [Information Technology University (ITU)](https://itu.edu.pk/), Lahore, Pakistan, working on HCI and NLP (PIs: [Ibrahim Ghaznavi](https://itu.edu.pk/faculty-itu/dr-syed-ibrahim-ghaznavi/), ITU; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
 - **Aug. 2025 ~ Nov. 2025** &nbsp; Visiting Research Assistant at [Qatar University](https://www.qu.edu.qa/), Doha, Qatar (PIs: [Ezieddin Elmahjub](https://www.linkedin.com/in/ezieddin-elmahjub-830193a9/), Harvard & Qatar University; [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/), Qatar University)
 - **May 2025 ~ Aug. 2025** &nbsp; Research Assistant (remote) at [Hamad Bin Khalifa University (HBKU)](https://www.hbku.edu.qa/), Doha, Qatar
