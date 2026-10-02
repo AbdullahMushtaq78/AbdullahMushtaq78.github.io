@@ -7,7 +7,7 @@ classes: [wide, home]
 
 <h1 class="sr-only">Abdullah Mushtaq</h1>
 
-<p class="hero">I study how <mark class="ent ent--model">large language models<span class="ent__label" aria-hidden="true">model</span></mark> can be <mark class="ent ent--method">trained, fine-tuned, and evaluated<span class="ent__label" aria-hidden="true">method</span></mark> for questions where <mark class="ent ent--domain">culture, religion, law, and politics<span class="ent__label" aria-hidden="true">domain</span></mark> decide what counts as a good answer.</p>
+<p class="hero">I study how <mark class="ent ent--model">large language models<span class="ent__label" aria-hidden="true">model</span></mark> are <mark class="ent ent--method">trained, fine-tuned, evaluated, and benchmarked<span class="ent__label" aria-hidden="true">method</span></mark>, and how to make them more <mark class="ent ent--domain">reliable and aligned<span class="ent__label" aria-hidden="true">goal</span></mark>.</p>
 
 I am a Ph.D. student in Computer Science at [Tulane University](https://tulane.edu/), advised by [Aron Culotta](https://www.cs.tulane.edu/~aculotta/). My Ph.D. research focuses on applied NLP and large language models, with an emphasis on training, fine-tuning, evaluation, and benchmarking. As a Graduate Research Assistant in the TulaneAI Group, I work on the NSF-HCC project *Socio-linguistic modeling to understand the long-term dynamics of news engagement in online media*, combining NLP, LLMs, and causal inference to study how people change their political views and engage with others online.
 

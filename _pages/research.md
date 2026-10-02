@@ -4,10 +4,10 @@ author_profile: true
 title: "Research"
 permalink: /research/
 classes: wide
-excerpt: "Research on applied NLP and large language models: benchmarks for culturally and legally grounded questions, cultural alignment, and multi-agent evaluation systems."
+excerpt: "Research on natural language processing and large language models: benchmarking and evaluation, alignment and bias, and multi-agent systems."
 ---
 
-I work on applied natural language processing and large language models, with a focus on how they are trained, fine-tuned, evaluated, and benchmarked. Most of my projects look at settings where culture, religion, law, or politics shapes what a good answer is. In those settings I build benchmarks with domain experts, design multi-agent systems that evaluate model output, and test methods that make models more inclusive.
+I work on natural language processing and large language models, with a focus on how they are trained, fine-tuned, evaluated, and benchmarked. My broader interests include multi-agent systems, alignment and hallucination, and AI4Science. Across projects, I build benchmarks and evaluation pipelines, design multi-agent LLM systems, and test methods that make models more reliable and aligned.
 {: .research-lead}
 
 ## Current project
@@ -25,9 +25,9 @@ So far, I have collected roughly 30,000 public comments and built the preprocess
 
 </div>
 
-## Benchmarks for culturally and legally grounded questions
+## Benchmarking and evaluation
 
-General benchmarks say little about how a model handles a question of Islamic law or religious guidance. I build domain-specific benchmarks with experts in those fields and use them to find where frontier models succeed and where they fail.
+Benchmarks shape what we believe a model can do. I build benchmarks and evaluation pipelines, often together with domain experts, to measure where frontier models succeed and where they fail.
 
 <div class="project" markdown="1">
 <figure class="project__figure">
@@ -63,9 +63,9 @@ An agent-based framework for evaluating religious content written by LLMs. A qua
 </div>
 </div>
 
-## Cultural alignment
+## Alignment and bias
 
-LLMs now shape how students learn about the world, so the perspectives they present matter. I measure cultural bias in frontier models and test ways to make their answers represent more worldviews.
+I study how to measure bias in frontier models and how to align their answers so they are more inclusive and reliable.
 
 <div class="project" markdown="1">
 <figure class="project__figure">
@@ -101,9 +101,9 @@ An audit of cultural bias in GPT-4, Claude 3.5, Llama 3.1 and 3.2, and Mistral 7
 </div>
 </div>
 
-## Multi-agent evaluation systems
+## Multi-agent systems
 
-Some assessments, like grading a design project or appraising a systematic review, involve many separate judgments. I build systems in which coordinator and specialist agents split that work into smaller checks, then compare their verdicts with those of human experts.
+I build multi-agent LLM systems in which coordinator and specialist agents split complex judgments into smaller checks, and I compare their verdicts with those of human experts.
 
 <div class="project" markdown="1">
 <figure class="project__figure">
