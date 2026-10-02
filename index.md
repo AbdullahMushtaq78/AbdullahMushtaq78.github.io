@@ -51,3 +51,24 @@ Before Tulane, I was a Research Assistant at [Information Technology University]
   <li><strong>2020--24</strong> &nbsp; Recipient of the <strong>HEC Ehsaas fully-funded undergraduate scholarship</strong>, Higher Education Commission, Pakistan.</li>
 </ul>
 </div>
+
+---
+
+## Contact
+
+The best way to reach me is by email. You can also find me in the Department of Computer Science at Tulane University.
+
+<div class="contact-grid">
+  <div class="contact-item">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+    <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:amushtaq1@tulane.edu">amushtaq1@tulane.edu</a></div>
+  </div>
+  <div class="contact-item">
+    <i class="fas fa-phone" aria-hidden="true"></i>
+    <div><span class="contact-label">Phone</span><a class="contact-value" href="tel:+15043882308">+1 (504) 388-2308</a></div>
+  </div>
+  <div class="contact-item">
+    <i class="fas fa-location-dot" aria-hidden="true"></i>
+    <div><span class="contact-label">Office</span><span class="contact-value">Stanley Thomas Hall, Room 309<br>Department of Computer Science<br>Tulane University<br>6823 St. Charles Ave<br>New Orleans, LA 70118</span></div>
+  </div>
+</div>

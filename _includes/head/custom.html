@@ -5,7 +5,9 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-{% if page.publication_filters %}<link rel="stylesheet" href="/assets/css/publications.css?v={{ site.time | date: '%s' }}">{% endif %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css">
+<!-- Styles for publication cards, research page, and contact block; versioned per build so browsers never pair new pages with an old stylesheet -->
+<link rel="stylesheet" href="/assets/css/components.css?v={{ site.time | date: '%s' }}">
 
 <meta name="google-site-verification" content="GGes9EaKutiFFsFq5bECxAZhL9dvCN6Q66A3GoX-9C8" />
 
@@ -17,9 +19,23 @@
       "url": "https://abdullahmushtaq78.github.io",
       "jobTitle": "Ph.D. Student in Computer Science",
       "description": "Ph.D. student in Computer Science at Tulane University working on applied NLP, large language models, and evaluation and benchmarking.",
+      "email": "mailto:amushtaq1@tulane.edu",
+      "telephone": "+1-504-388-2308",
       "affiliation": {
         "@type": "CollegeOrUniversity",
         "name": "Tulane University"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "name": "Department of Computer Science, Tulane University",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Stanley Thomas Hall, Room 309, 6823 St. Charles Ave",
+          "addressLocality": "New Orleans",
+          "addressRegion": "LA",
+          "postalCode": "70118",
+          "addressCountry": "US"
+        }
       },
       "alumniOf": {
         "@type": "Organization",
@@ -30,6 +46,7 @@
         "https://www.linkedin.com/in/abdullah-mushtaq78",
         "https://github.com/AbdullahMushtaq78",
         "https://scholar.google.com/citations?user=jOJB8tkAAAAJ&hl=en&oi=ao",
+        "https://dblp.org/pid/407/2872",
         "https://x.com/AbdullahInSpace"
       ]
     }

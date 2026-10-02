@@ -34,10 +34,7 @@ $type-size-6 : 0.8em;
 // }
 
 // /* ── Profile avatar ── */
-.author__avatar img {
-  max-width: 180px !important;
-  width: 180px !important;
-}
+// Desktop size lives in components.scss (only above 1024px, so phones keep the theme's smaller avatar).
 // .author__avatar { display: block; text-align: center; }
 
 // /* ── Visited links ── */
