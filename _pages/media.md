@@ -8,6 +8,8 @@ classes: wide
 
 ## Awards & Honors
 
+My academic work has been recognized with the following awards, scholarships, and honors.
+
 **Dean's Honor List -- Top 5% of Class** -- Information Technology University, 2024\\
 Specialization GPA: 3.83/4.0. Merit Scholarship holder 2020--2024.
 

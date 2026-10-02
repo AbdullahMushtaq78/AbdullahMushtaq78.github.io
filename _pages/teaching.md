@@ -6,6 +6,8 @@ permalink: /teaching/
 classes: wide
 ---
 
+During my undergraduate studies at Information Technology University (ITU), Lahore, I served as a teaching assistant for three courses spanning programming, information and communication technologies, and virtual reality, supporting more than 250 undergraduate and graduate students.
+
 ## Teaching Assistantships
 
 **Teaching Assistant** -- [Information Technology University](https://itu.edu.pk/), Lahore, Pakistan\\
