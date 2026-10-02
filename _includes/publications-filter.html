@@ -1,8 +1,8 @@
 <!--
-  Turns the markdown papers on the Publications page into filterable cards.
+  Turns the markdown papers on the Publications page into a filterable list.
   Each paper in _pages/publications.md is a "### Title" heading followed by a
   list of "**Label:** value" lines. Runs inline right after the page content,
-  so the cards are built before the page is first painted.
+  so the list is built before the page is first painted.
 -->
 <script>
 (function () {
@@ -14,18 +14,6 @@
     { key: 'journal', label: 'Journal' },
     { key: 'conference', label: 'Conference' },
     { key: 'preprint', label: 'Preprints' }
-  ];
-
-  var LINK_ICONS = [
-    [/code|github/i, 'fab fa-github'],
-    [/arxiv|paper|preprint/i, 'fas fa-file-alt'],
-    [/pdf/i, 'fas fa-file-pdf'],
-    [/leaderboard/i, 'fas fa-trophy'],
-    [/data/i, 'fas fa-database'],
-    [/slides|poster/i, 'fas fa-chalkboard'],
-    [/video|talk/i, 'fab fa-youtube'],
-    [/springer|journal|publisher|doi|acm|ieee/i, 'fas fa-book-open'],
-    [/project|website|demo/i, 'fas fa-globe']
   ];
 
   function normalizeType(text) {
@@ -67,26 +55,24 @@
     return node;
   }
 
-  function buildCard(heading, fields) {
+  function buildEntry(heading, fields) {
     var type = normalizeType(fields.type && fields.type.textContent);
     var titleLink = heading.querySelector('a:not(.header-link)');
     var venueText = fields.venue ? fields.venue.textContent : '';
     var yearMatch = (fields.year ? fields.year.textContent : venueText).match(/(19|20)\d{2}/);
 
-    var card = el('article', 'pub-card');
-    card.dataset.type = type;
-    if (heading.id) card.id = heading.id;
+    var entry = el('article', 'pub');
+    entry.dataset.type = type;
+    if (heading.id) entry.id = heading.id;
 
-    var badge = el('div', 'pub-card__badge');
-    badge.appendChild(el('span', 'pub-card__badge-name')).textContent = fields.badge ? fields.badge.textContent.trim() : type;
-    if (yearMatch) {
-      badge.appendChild(document.createTextNode(' '));
-      badge.appendChild(el('span', 'pub-card__badge-year')).textContent = yearMatch[0];
-    }
-    card.appendChild(badge);
+    var margin = el('div', 'pub__margin');
+    if (yearMatch) margin.appendChild(el('span', 'pub__year')).textContent = yearMatch[0];
+    margin.appendChild(document.createTextNode(' '));
+    margin.appendChild(el('span', 'pub__venue')).textContent = fields.badge ? fields.badge.textContent.trim() : type;
+    entry.appendChild(margin);
 
-    var body = el('div', 'pub-card__body');
-    var title = el('h3', 'pub-card__title');
+    var body = el('div', 'pub__body');
+    var title = el('h3', 'pub__title');
     if (titleLink) {
       var a = el('a');
       a.href = titleLink.href;
@@ -97,53 +83,49 @@
     }
     body.appendChild(title);
 
-    if (fields.authors) body.appendChild(el('p', 'pub-card__authors', fields.authors.innerHTML));
-    if (fields.venue) body.appendChild(el('p', 'pub-card__venue', fields.venue.innerHTML));
+    if (fields.authors) body.appendChild(el('p', 'pub__authors', fields.authors.innerHTML));
+    if (fields.venue) body.appendChild(el('p', 'pub__in', fields.venue.innerHTML));
 
-    var details = [];
-    if (fields.details) details.push(fields.details.innerHTML);
+    var notes = [];
+    if (fields.details) notes.push(fields.details.innerHTML);
     if (fields.doi) {
       var doi = fields.doi.textContent.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//, '');
       var doiLink = el('a');
       doiLink.href = 'https://doi.org/' + doi;
       doiLink.textContent = doi;
-      details.push('DOI: ' + doiLink.outerHTML);
+      notes.push('DOI ' + doiLink.outerHTML);
     }
-    if (details.length) body.appendChild(el('p', 'pub-card__details', details.join(' · ')));
+    if (notes.length) body.appendChild(el('p', 'pub__notes', notes.join('<br>')));
 
     var links = fields.links ? fields.links.querySelectorAll('a') : [];
     if (links.length) {
-      var row = el('div', 'pub-card__links');
+      var row = el('p', 'pub__links');
       Array.prototype.forEach.call(links, function (source) {
-        var link = el('a', 'pub-link');
+        var link = el('a');
         link.href = source.href;
-        link.target = '_blank';
-        link.rel = 'noopener';
-        var icon = LINK_ICONS.filter(function (pair) { return pair[0].test(source.textContent); })[0];
-        link.appendChild(el('i', icon ? icon[1] : 'fas fa-link')).setAttribute('aria-hidden', 'true');
-        link.appendChild(document.createTextNode(source.textContent));
+        link.textContent = source.textContent;
         row.appendChild(link);
+        row.appendChild(document.createTextNode(' '));
       });
       body.appendChild(row);
     }
 
-    card.appendChild(body);
-    return card;
+    entry.appendChild(body);
+    return entry;
   }
 
   var headings = Array.prototype.filter.call(content.querySelectorAll('h3'), isPaper);
   if (!headings.length) return;
 
   var list = el('div', 'pub-list');
-  var cards = headings.map(function (heading) {
-    var source = heading.nextElementSibling;
-    var card = buildCard(heading, readFields(source));
-    list.appendChild(card);
-    return card;
+  var entries = headings.map(function (heading) {
+    var entry = buildEntry(heading, readFields(heading.nextElementSibling));
+    list.appendChild(entry);
+    return entry;
   });
 
-  var counts = { all: cards.length };
-  cards.forEach(function (card) { counts[card.dataset.type] = (counts[card.dataset.type] || 0) + 1; });
+  var counts = { all: entries.length };
+  entries.forEach(function (entry) { counts[entry.dataset.type] = (counts[entry.dataset.type] || 0) + 1; });
 
   var bar = el('div', 'pub-filters');
   bar.setAttribute('role', 'group');
@@ -151,26 +133,29 @@
   var status = el('p', 'pub-sr-only');
   status.setAttribute('aria-live', 'polite');
 
-  function apply(key) {
-    var shown = 0;
+  function setActive(key) {
     Array.prototype.forEach.call(bar.children, function (button) {
       var active = button.dataset.filter === key;
       button.classList.toggle('is-active', active);
       button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-    cards.forEach(function (card) {
-      var visible = key === 'all' || card.dataset.type === key;
-      card.hidden = !visible;
-      card.style.display = visible ? '' : 'none';
-      card.classList.remove('is-entering');
+  }
+
+  function apply(key) {
+    var shown = 0;
+    setActive(key);
+    entries.forEach(function (entry) {
+      var visible = key === 'all' || entry.dataset.type === key;
+      entry.hidden = !visible;
+      entry.style.display = visible ? '' : 'none';
+      entry.classList.remove('is-entering');
       if (visible) {
-        void card.offsetWidth;
-        card.style.animationDelay = (shown * 40) + 'ms';
-        card.classList.add('is-entering');
+        void entry.offsetWidth;
+        entry.classList.add('is-entering');
         shown += 1;
       }
     });
-    status.textContent = 'Showing ' + shown + ' of ' + cards.length + ' publications';
+    status.textContent = 'Showing ' + shown + ' of ' + entries.length + ' publications';
   }
 
   FILTERS.forEach(function (filter) {
@@ -195,10 +180,6 @@
     heading.parentNode.removeChild(heading);
   });
 
-  Array.prototype.forEach.call(bar.children, function (button) {
-    var active = button.dataset.filter === 'all';
-    button.classList.toggle('is-active', active);
-    button.setAttribute('aria-pressed', active ? 'true' : 'false');
-  });
+  setActive('all');
 })();
 </script>

@@ -1,3 +1,13 @@
 <!-- start custom footer snippets -->
 {% if page.publication_filters %}{% include publications-filter.html %}{% endif %}
+<script>
+  // Mark the current page in the top navigation so readers can see where they are.
+  (function () {
+    var path = location.pathname.replace(/index\.html$/, '');
+    document.querySelectorAll('.greedy-nav .visible-links a').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href === path || (href !== '/' && path.indexOf(href) === 0)) link.setAttribute('aria-current', 'page');
+    });
+  })();
+</script>
 <!-- end custom footer snippets -->
