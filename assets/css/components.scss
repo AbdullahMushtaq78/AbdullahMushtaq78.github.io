@@ -538,17 +538,8 @@ summary:focus-visible {
 .page__content .project-long {
   margin: 1.6em 0 2.4em;
 
-  > p, > ul, > h4 { max-width: 40em; }
-  h3 { margin: .15em 0 .2em; }
-  h4 {
-    margin: 1.6em 0 .35em;
-    font-family: var(--sans);
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--green-deep);
-  }
-  > ul { padding-left: 1.1em; }
-  > ul > li { margin-bottom: .4em; }
+  > p { max-width: 40em; }
+  h3 { margin: .15em 0 .45em; }
 }
 .page__content .katex-display {
   max-width: 100%;
