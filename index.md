@@ -11,7 +11,7 @@ classes: [wide, home]
 
 I am a Ph.D. student in Computer Science at [Tulane University](https://tulane.edu/), advised by [Aron Culotta](https://www.cs.tulane.edu/~aculotta/). My Ph.D. research focuses on applied NLP and large language models, with an emphasis on training, fine-tuning, evaluation, and benchmarking. As a Graduate Research Assistant in the TulaneAI Group, I work on the NSF-HCC project *Socio-linguistic modeling to understand the long-term dynamics of news engagement in online media*, combining NLP, LLMs, and causal inference to study how people change their political views and engage with others online.
 
-**Research interests:** natural language processing, large language models, multi-agent systems, alignment and hallucination, and AI4Science.
+**Research interests:** Natural Language Processing, Large Language Models, Multi-Agent Systems, World Models, Alignment, and AI4Science.
 
 Before Tulane, I was a Research Assistant at [Information Technology University](https://itu.edu.pk/), Lahore, working on HCI and NLP with [Ibrahim Ghaznavi](https://itu.edu.pk/faculty-itu/dr-syed-ibrahim-ghaznavi/) and [Junaid Qadir](http://qufaculty.qu.edu.qa/jqadir/). Earlier, I held research positions at [Qatar University](https://www.qu.edu.qa/) and [Zayed University](https://www.zu.ac.ae/), and collaborated with researchers at Oxford, Weill Cornell Medicine, and Imperial College London. My work has appeared in venues including the [Journal of Artificial Intelligence Research](https://www.jair.org/), [Artificial Intelligence and Law](https://link.springer.com/journal/10506), and the [NeurIPS 2025](https://neurips.cc/) MusIML Workshop. I received my B.S. in Computer Science from ITU in 2024, graduating on the Dean's Honor List.
 
