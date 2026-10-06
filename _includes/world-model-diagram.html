@@ -1,0 +1,139 @@
+<div class="wm-diagram">
+<svg class="wm-diagram__wide" viewBox="0 0 980 572" role="img" aria-labelledby="wmw-title wmw-desc">
+<title id="wmw-title">Task-agnostic continual learning with a world model</title>
+<desc id="wmw-desc">A DeepMind Control environment, whose tasks switch silently, sends 64 by 64 pixel observations to a DreamerV3-style world model. A CNN encoder feeds a recurrent state-space model (RSSM), whose state drives a decoder, a reward head, and an actor-critic that learns from imagined 15-step rollouts. A context-shift detector compares the decoded prior prediction with the actual frame; its error spikes when the task switches. A planned skill memory retains learned skills and recombines them, and the actor's actions return to the environment.</desc>
+<defs><marker id="wm-arrow-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="wire-head"/></marker></defs>
+<rect class="panel panel--wm" x="32" y="24" width="584" height="446" rx="12"/>
+<text class="d-title" x="52" y="56">World model</text>
+<text class="d-note" x="52" y="77">learns latent dynamics from pixels</text>
+<rect class="box" x="52" y="98" width="152" height="54" rx="6"/>
+<text class="d-name" x="128" y="121" text-anchor="middle">Observation <tspan class="d-math">x<tspan class="d-sub" dy="4">t</tspan></tspan></text>
+<text class="d-note" x="128" y="142" text-anchor="middle">64×64 RGB</text>
+<path class="wire" d="M128,152 V200" marker-end="url(#wm-arrow-w)"/>
+<rect class="box" x="52" y="200" width="152" height="54" rx="6"/>
+<text class="d-name" x="128" y="223" text-anchor="middle">Encoder</text>
+<text class="d-note" x="128" y="244" text-anchor="middle">CNN</text>
+<text class="d-note d-note--muted" x="52" y="300">One world model for</text>
+<text class="d-note d-note--muted" x="52" y="319">the whole task stream,</text>
+<text class="d-note d-note--muted" x="52" y="338">with no task IDs.</text>
+<path class="wire" d="M204,227 H292" marker-end="url(#wm-arrow-w)"/>
+<text class="d-math" x="248" y="217" text-anchor="middle">e<tspan class="d-sub" dy="4">t</tspan></text>
+<text class="d-note" x="248" y="247" text-anchor="middle">1024-d</text>
+<rect class="box" x="292" y="98" width="304" height="156" rx="6"/>
+<text class="d-name" x="444" y="124" text-anchor="middle">RSSM</text>
+<text class="d-note" x="444" y="144" text-anchor="middle">recurrent state-space model</text>
+<text class="d-math" x="444" y="182" text-anchor="middle">h<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> = </tspan><tspan class="d-op">GRU</tspan>(h<tspan class="d-sub" dy="4">t−1</tspan><tspan dy="-4">, z</tspan><tspan class="d-sub" dy="4">t−1</tspan><tspan dy="-4">, a</tspan><tspan class="d-sub" dy="4">t−1</tspan><tspan dy="-4">)</tspan></text>
+<text class="d-math" x="444" y="208" text-anchor="middle"><tspan class="d-note">prior </tspan>p(z<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> | h</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></text>
+<text class="d-math" x="444" y="234" text-anchor="middle"><tspan class="d-note">posterior </tspan>q(z<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> | h</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">, e</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></text>
+<path class="wire" d="M365,254 V296" marker-end="url(#wm-arrow-w)"/>
+<path class="wire" d="M523,254 V296" marker-end="url(#wm-arrow-w)"/>
+<text class="d-math" x="444" y="280" text-anchor="middle">s<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> = (h</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">, z</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></text>
+<rect class="box" x="292" y="296" width="146" height="54" rx="6"/>
+<text class="d-name" x="365" y="319" text-anchor="middle">Decoder</text>
+<text class="d-note" x="365" y="340" text-anchor="middle">CNN, predicted frame</text>
+<rect class="box" x="450" y="296" width="146" height="54" rx="6"/>
+<text class="d-name" x="523" y="319" text-anchor="middle">Reward head</text>
+<text class="d-note" x="523" y="340" text-anchor="middle">MLP</text>
+<path class="wire" d="M365,350 V380" marker-end="url(#wm-arrow-w)"/>
+<text class="d-note d-note--muted" x="373" y="370">from the prior</text>
+<rect class="box box--signal" x="292" y="380" width="304" height="76" rx="6"/>
+<text class="d-name" x="444" y="404" text-anchor="middle">Context-shift detector</text>
+<text class="d-note" x="444" y="424" text-anchor="middle">predicted frame vs. actual frame:</text>
+<text class="d-note" x="444" y="443" text-anchor="middle">error spikes when the task switches</text>
+<rect class="panel panel--ac" x="632" y="24" width="320" height="282" rx="12"/>
+<text class="d-title" x="652" y="56">Actor-critic</text>
+<text class="d-note" x="652" y="77">learns inside the world model</text>
+<text class="d-note" x="652" y="106">Imagined 15-step rollouts, prior only:</text>
+<text class="d-math" x="652" y="128">s<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4" class="d-note"> → actor → </tspan>a<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4" class="d-note"> → prior → </tspan>s<tspan class="d-sub" dy="4">t+1</tspan><tspan dy="-4" class="d-note"> → …</tspan></text>
+<rect class="box" x="652" y="148" width="280" height="56" rx="6"/>
+<text class="d-name" x="792" y="171" text-anchor="middle">Actor</text>
+<text class="d-note" x="792" y="192" text-anchor="middle">MLP, <tspan class="d-math">π(a<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> | s</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect class="box" x="652" y="224" width="280" height="56" rx="6"/>
+<text class="d-name" x="792" y="247" text-anchor="middle">Critic</text>
+<text class="d-note" x="792" y="268" text-anchor="middle">MLP, <tspan class="d-math">V(s<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></tspan></text>
+<path class="wire" d="M596,132 H622 V176 H652" marker-end="url(#wm-arrow-w)"/>
+<path class="wire" d="M622,176 V252 H652" marker-end="url(#wm-arrow-w)"/>
+<text class="d-math" x="603" y="122">s<tspan class="d-sub" dy="4">t</tspan></text>
+<rect class="panel panel--plan" x="632" y="330" width="320" height="140" rx="12"/>
+<text class="d-title" x="652" y="360">Skill memory</text>
+<text class="d-note d-note--muted" x="932" y="360" text-anchor="end">planned</text>
+<text class="d-note" x="652" y="384">retains learned skills as modules and</text>
+<text class="d-note" x="652" y="403">recombines them over long horizons:</text>
+<text class="d-note d-note--ink" x="652" y="434">reach + grasp + release → pick-and-place</text>
+<path class="wire wire--plan" d="M596,418 H631" marker-end="url(#wm-arrow-w)"/>
+<path class="wire wire--plan" d="M792,330 V307" marker-end="url(#wm-arrow-w)"/>
+<text class="d-note d-note--muted" x="800" y="323">recall</text>
+<rect class="panel panel--env" x="32" y="500" width="920" height="56" rx="10"/>
+<text class="d-title" x="52" y="524">Environment</text>
+<text class="d-note" x="52" y="544">DeepMind Control, in simulation</text>
+<text class="d-note" x="932" y="524" text-anchor="end">Tasks switch silently, 25,000 steps each:</text>
+<text class="d-note d-note--ink" x="932" y="544" text-anchor="end">walker-stand → cheetah-run → walker-stand</text>
+<path class="wire" d="M32,528 H14 V125 H52" marker-end="url(#wm-arrow-w)"/>
+<path class="wire" d="M520,500 V458" marker-end="url(#wm-arrow-w)"/>
+<text class="d-note d-note--muted" x="528" y="489">actual frame</text>
+<path class="wire" d="M932,176 H964 V528 H954" marker-end="url(#wm-arrow-w)"/>
+<text class="d-math" x="940" y="168">a<tspan class="d-sub" dy="4">t</tspan></text>
+</svg>
+<svg class="wm-diagram__tall" viewBox="-16 0 376 960" role="img" aria-labelledby="wmt-title wmt-desc">
+<title id="wmt-title">Task-agnostic continual learning with a world model</title>
+<desc id="wmt-desc">A DeepMind Control environment, whose tasks switch silently, sends 64 by 64 pixel observations to a DreamerV3-style world model. A CNN encoder feeds a recurrent state-space model (RSSM), whose state drives a decoder, a reward head, and an actor-critic that learns from imagined 15-step rollouts. A context-shift detector compares the decoded prior prediction with the actual frame; its error spikes when the task switches. A planned skill memory retains learned skills and recombines them, and the actor's actions return to the environment.</desc>
+<defs><marker id="wm-arrow-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="wire-head"/></marker></defs>
+<rect class="panel panel--env" x="12" y="12" width="320" height="84" rx="10"/>
+<text class="d-title" x="28" y="38">Environment</text>
+<text class="d-note" x="28" y="59">DeepMind Control; tasks switch silently:</text>
+<text class="d-note d-note--ink" x="28" y="80">walker-stand → cheetah-run → walker-stand</text>
+<path class="wire" d="M172,96 V134" marker-end="url(#wm-arrow-t)"/>
+<text class="d-note" x="182" y="120"><tspan class="d-math">x<tspan class="d-sub" dy="4">t</tspan></tspan><tspan dy="-4">, 64×64 RGB</tspan></text>
+<rect class="panel panel--wm" x="12" y="136" width="320" height="452" rx="10"/>
+<text class="d-title" x="28" y="162">World model</text>
+<text class="d-note" x="28" y="181">one model for the whole task stream</text>
+<rect class="box" x="28" y="196" width="288" height="48" rx="6"/>
+<text class="d-name" x="172" y="216" text-anchor="middle">Encoder</text>
+<text class="d-note" x="172" y="235" text-anchor="middle">CNN</text>
+<path class="wire" d="M172,244 V270" marker-end="url(#wm-arrow-t)"/>
+<text class="d-note" x="182" y="262"><tspan class="d-math">e<tspan class="d-sub" dy="4">t</tspan></tspan><tspan dy="-4">, 1024-d</tspan></text>
+<rect class="box" x="28" y="272" width="288" height="120" rx="6"/>
+<text class="d-name" x="172" y="294" text-anchor="middle">RSSM</text>
+<text class="d-math" x="172" y="320" text-anchor="middle">h<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> = </tspan><tspan class="d-op">GRU</tspan>(h<tspan class="d-sub" dy="4">t−1</tspan><tspan dy="-4">, z</tspan><tspan class="d-sub" dy="4">t−1</tspan><tspan dy="-4">, a</tspan><tspan class="d-sub" dy="4">t−1</tspan><tspan dy="-4">)</tspan></text>
+<text class="d-math" x="172" y="346" text-anchor="middle"><tspan class="d-note">prior </tspan>p(z<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> | h</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></text>
+<text class="d-math" x="172" y="372" text-anchor="middle"><tspan class="d-note">posterior </tspan>q(z<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> | h</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">, e</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></text>
+<path class="wire" d="M100,392 V420" marker-end="url(#wm-arrow-t)"/>
+<path class="wire" d="M244,392 V420" marker-end="url(#wm-arrow-t)"/>
+<text class="d-math" x="172" y="411" text-anchor="middle">s<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> = (h</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">, z</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></text>
+<rect class="box" x="28" y="420" width="140" height="52" rx="6"/>
+<text class="d-name" x="98" y="442" text-anchor="middle">Decoder</text>
+<text class="d-note" x="98" y="462" text-anchor="middle">CNN</text>
+<rect class="box" x="176" y="420" width="140" height="52" rx="6"/>
+<text class="d-name" x="246" y="442" text-anchor="middle">Reward head</text>
+<text class="d-note" x="246" y="462" text-anchor="middle">MLP</text>
+<path class="wire" d="M98,472 V498" marker-end="url(#wm-arrow-t)"/>
+<rect class="box box--signal" x="28" y="498" width="288" height="76" rx="6"/>
+<text class="d-name" x="172" y="521" text-anchor="middle">Context-shift detector</text>
+<text class="d-note" x="172" y="541" text-anchor="middle">predicted frame vs. actual frame:</text>
+<text class="d-note" x="172" y="560" text-anchor="middle">error spikes when the task switches</text>
+<path class="wire wire--plan" d="M172,574 V614" marker-end="url(#wm-arrow-t)"/>
+<rect class="panel panel--plan" x="12" y="616" width="320" height="104" rx="10"/>
+<text class="d-title" x="28" y="642">Skill memory</text>
+<text class="d-note d-note--muted" x="316" y="642" text-anchor="end">planned</text>
+<text class="d-note" x="28" y="664">retains skills and recombines them:</text>
+<text class="d-note d-note--ink" x="28" y="686">reach + grasp + release</text>
+<text class="d-note d-note--ink" x="28" y="706">→ pick-and-place</text>
+<path class="wire wire--plan" d="M172,720 V748" marker-end="url(#wm-arrow-t)"/>
+<text class="d-note d-note--muted" x="182" y="739">recall</text>
+<rect class="panel panel--ac" x="12" y="750" width="320" height="196" rx="10"/>
+<text class="d-title" x="28" y="776">Actor-critic</text>
+<text class="d-note" x="28" y="795">learns from imagined 15-step rollouts</text>
+<rect class="box" x="28" y="810" width="140" height="56" rx="6"/>
+<text class="d-name" x="98" y="833" text-anchor="middle">Actor</text>
+<text class="d-note" x="98" y="853" text-anchor="middle">MLP, <tspan class="d-math">π(a<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4"> | s</tspan><tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect class="box" x="176" y="810" width="140" height="56" rx="6"/>
+<text class="d-name" x="246" y="833" text-anchor="middle">Critic</text>
+<text class="d-note" x="246" y="853" text-anchor="middle">MLP, <tspan class="d-math">V(s<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4">)</tspan></tspan></text>
+<text class="d-math" x="28" y="894">s<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4" class="d-note"> → actor → </tspan>a<tspan class="d-sub" dy="4">t</tspan><tspan dy="-4" class="d-note"> → prior → </tspan>s<tspan class="d-sub" dy="4">t+1</tspan><tspan dy="-4" class="d-note"> → …</tspan></text>
+<text class="d-note" x="28" y="928">actions <tspan class="d-math">a<tspan class="d-sub" dy="4">t</tspan></tspan><tspan dy="-4"> return to the environment</tspan></text>
+<path class="wire" d="M28,332 H-4 V590"/>
+<path class="wire" d="M-4,614 V838 H28" marker-end="url(#wm-arrow-t)"/>
+<text class="d-math" x="-4" y="606" text-anchor="middle">s<tspan class="d-sub" dy="4">t</tspan></text>
+<path class="wire" d="M332,924 H348 V54 H334" marker-end="url(#wm-arrow-t)"/>
+</svg>
+</div>

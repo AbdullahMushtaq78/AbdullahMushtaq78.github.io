@@ -4,6 +4,7 @@ author_profile: true
 title: "Research"
 permalink: /research/
 classes: wide
+math: true
 excerpt: "Research on natural language processing and large language models: benchmarking and evaluation, alignment and bias, multi-agent systems, and world models."
 ---
 
@@ -143,23 +144,89 @@ Twenty-seven LLM agents, organized into PRISMA-inspired deliberative societies, 
 
 I am interested in world models as a foundation for embodied agents that keep learning: agents that adapt to new tasks, keep what they already know, and reuse it, without being told when the task has changed.
 
-<div class="project" markdown="1">
-<figure class="project__figure">
-  <a href="/assets/images/research/world-model-task-switch.png"><img src="/assets/images/research/world-model-task-switch.png" alt="World model prediction error spiking at both silent task boundaries" loading="lazy"></a>
-  <a href="/assets/images/research/world-model-tsne.png"><img src="/assets/images/research/world-model-tsne.png" alt="t-SNE of the world model's hidden states separating walker-stand and cheetah-run into two clusters" loading="lazy"></a>
-  <figcaption>Top: the world model's prediction error spikes at the exact step of each silent task switch. Bottom: its hidden states separate the two tasks without ever seeing a task label.</figcaption>
-</figure>
-<div class="project__text" markdown="1">
+<div class="project-long" markdown="1">
 <span class="venue-mark venue-mark--preprint">Proposal and preliminary results</span>
 
 ### Task-agnostic continual learning for embodied agents
 
-Robots face tasks and dynamics that change without warning, yet most continual-learning methods depend on explicit task IDs and cleanly segmented replay. I proposed grounding task-agnostic continual reinforcement learning in a world model: a shared latent dynamics model, trained jointly with the policy, whose prediction error serves as a self-supervised signal that the dynamics have changed. A compositional skill memory then retains learned behaviors and recombines them over long horizons, for example building pick-and-place from reach, grasp, and release.
+#### Problem
 
-To test the core idea, I adapted a PyTorch [DreamerV3](https://danijar.com/project/dreamerv3/) world model with a custom loader for non-stationary task streams, and trained it from 64×64 pixels on DeepMind Control tasks that switch silently: walker-stand, then cheetah-run, then walker-stand again, 25,000 steps each. With no task labels, its prior reconstruction error spiked 8× and 95× above baseline at the exact step of each switch, before the agent had a chance to fail, and its recurrent hidden states organized into a separate cluster for each task.
+A continual reinforcement-learning agent faces a stream of tasks, each a Markov decision process $$\mathcal{M}_k = (\mathcal{S}, \mathcal{A}, P_k, R_k)$$, that replace one another without warning. Most continual-learning methods assume the task index $$k$$ is given, or that replay is cleanly segmented by task. A robot gets neither. The open problem is therefore not only catastrophic forgetting: the agent has to balance stability and plasticity while it discovers the task structure on its own.
 
-I also reproduced [LEGION](https://www.nature.com/articles/s42256-025-00983-2) (*Nature Machine Intelligence*), a continual-RL baseline, on Meta-World MT10, and began adapting it to train without task IDs. Next steps are longer task sequences, switches at variable times, and transformer-based world models such as Dreamer 4.
+#### Approach
+
+My hypothesis is that a world model trained jointly with the policy captures the latent dynamics $$P_k$$, so its prediction error can act as a self-supervised signal that the regime has changed. A compositional skill memory would then retain the behaviors learned in each regime and recombine them over long horizons.
+
+<figure class="wm-figure">
+{% include world-model-diagram.html %}
+<figcaption>The proposed system. A DreamerV3-style world model, trained on the whole task stream with no task IDs, gives the actor-critic its latent state and the context-shift detector its prediction error. The skill memory is the next stage of the proposal.</figcaption>
+</figure>
+
+The world model is a recurrent state-space model (RSSM). A CNN encodes each frame $$x_t$$ into an embedding $$e_t$$, a GRU carries a deterministic state $$h_t$$, and a stochastic state $$z_t$$ has a prior, computed before the frame arrives, and a posterior, computed after it. With $$s_t = (h_t, z_t)$$:
+
+$$
+\begin{aligned}
+&\text{Sequence model:} && h_t = f_\phi(h_{t-1}, z_{t-1}, a_{t-1}) \\
+&\text{Posterior:} && z_t \sim q_\phi(z_t \mid h_t, e_t) \\
+&\text{Prior:} && \hat{z}_t \sim p_\phi(\hat{z}_t \mid h_t) \\
+&\text{Decoder:} && \hat{x}_t \sim p_\phi(\hat{x}_t \mid s_t) \\
+&\text{Reward head:} && \hat{r}_t \sim p_\phi(\hat{r}_t \mid s_t)
+\end{aligned}
+$$
+
+It is trained with the DreamerV3 objective, which without its continuation head is
+
+$$
+\begin{aligned}
+\mathcal{L}(\phi) = \mathbb{E}_{q_\phi}\Big[\sum_t \, & -\ln p_\phi(x_t \mid s_t) - \ln p_\phi(r_t \mid s_t) \\
+& + \beta_{\text{dyn}}\, \mathrm{KL}\big[\mathrm{sg}(q_\phi) \,\Vert\, p_\phi\big] \\
+& + \beta_{\text{rep}}\, \mathrm{KL}\big[q_\phi \,\Vert\, \mathrm{sg}(p_\phi)\big]\Big],
+\end{aligned}
+$$
+
+where $$\mathrm{sg}$$ stops gradients. The actor $$\pi_\theta(a_t \mid s_t)$$ and critic $$v_\psi(s_t)$$ learn entirely from 15-step rollouts imagined with the prior.
+
+#### Task-switch signal
+
+To tell whether the dynamics have changed, I decode the prior's prediction and compare it with the frame that actually arrives:
+
+$$
+\varepsilon_t = \frac{1}{D}\,\big\lVert \mathrm{dec}_\phi(h_t, \hat{z}_t) - x_t \big\rVert_2^2,
+$$
+
+where $$D = 64 \times 64 \times 3$$ is the number of pixel values. Because $$h_t$$ and $$\hat{z}_t$$ depend only on past frames and actions, $$\varepsilon_t$$ is a pure prediction error. It reacts to the first frame of a new task, before the policy has had a chance to fail. The detector then scores each step against the mean $$\mu_t$$ and standard deviation $$\sigma_t$$ of the previous $$W$$ errors:
+
+$$
+S_t = \frac{\varepsilon_t - \mu_t}{\sigma_t + \delta}.
+$$
+
+A sustained rise in $$S_t$$ marks a new dynamics regime. A low, stable score means the agent is in a regime it has already learned.
+
+#### Preliminary results
+
+I adapted a PyTorch [DreamerV3](https://danijar.com/project/dreamerv3/) with a custom loader for non-stationary task streams and trained it from 64×64 pixels on DeepMind Control tasks that switch silently: walker-stand, then cheetah-run, then walker-stand again, 25,000 steps each, with no task IDs anywhere in training.
+
+<div class="wm-results">
+<figure>
+  <a href="/assets/images/research/world-model-task-switch.png"><img src="/assets/images/research/world-model-task-switch.png" alt="Prior reconstruction error over 75,000 steps, spiking at both silent task switches" loading="lazy"></a>
+  <figcaption>Prior reconstruction error \(\varepsilon_t\) over the task stream. The dashed lines mark the two silent switches.</figcaption>
+</figure>
+<figure>
+  <a href="/assets/images/research/world-model-tsne.png"><img src="/assets/images/research/world-model-tsne.png" alt="t-SNE of the RSSM hidden state, with walker-stand and cheetah-run in two separate clusters" loading="lazy"></a>
+  <figcaption>t-SNE of the hidden state \(h_t\), coloured by the true task, which the model never saw.</figcaption>
+</figure>
 </div>
+
+- **The error is an online change-point detector.** $$\varepsilon_t$$ spiked 8× above baseline at the first switch and 95× at the second, at the exact step of each.
+- **The latent state encodes task identity.** $$h_t$$ forms a separate cluster for each task. In learning to predict accurately, the world model implicitly solves task identification.
+- **The policy still forgets.** Episode return rose to about 250 on walker-stand, collapsed on cheetah-run, and recovered only to about 150 when walker-stand returned. The skill memory is meant to prevent exactly this interference.
+
+#### Next steps
+
+- **Skill memory.** Represent skills as parameterized sub-policies with hierarchical composition operators, so that pick-and-place, for example, is built from reach, grasp, reach-to-goal, and release.
+- **Task-agnostic baseline.** I reproduced [LEGION](https://www.nature.com/articles/s42256-025-00983-2) (*Nature Machine Intelligence*) on Meta-World MT10, and I am removing its hard-coded dependence on task IDs.
+- **Evaluation.** Meta-World MT10 and MT50, Continual World CW10 and CW20, and CompoSuite, measuring per-task success, forgetting, forward and backward transfer, and adaptation speed against EWC, PackNet, A-GEM, reservoir replay, perfect memory, and LEGION.
+- **Scale.** Longer task sequences, switches at variable times, and transformer-based world models such as Dreamer 4.
 </div>
 
 ## Earlier work
