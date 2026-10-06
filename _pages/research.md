@@ -7,7 +7,7 @@ classes: wide
 excerpt: "Research on natural language processing and large language models: benchmarking and evaluation, alignment and bias, and multi-agent systems."
 ---
 
-I work on natural language processing and large language models, with a focus on how they are trained, fine-tuned, evaluated, and benchmarked. My broader interests include multi-agent systems, alignment and hallucination, and AI4Science. Across projects, I build benchmarks and evaluation pipelines, design multi-agent LLM systems, and test methods that make models more reliable and aligned.
+I work on natural language processing and large language models, with a focus on how they are trained, fine-tuned, evaluated, and benchmarked. My broader interests include multi-agent systems, world models, alignment, and AI4Science. Across projects, I build benchmarks and evaluation pipelines, design multi-agent LLM systems, and test methods that make models more reliable and aligned.
 {: .research-lead}
 
 ## Current project
