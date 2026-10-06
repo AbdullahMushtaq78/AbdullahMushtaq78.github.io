@@ -4,7 +4,7 @@ author_profile: true
 title: "Research"
 permalink: /research/
 classes: wide
-excerpt: "Research on natural language processing and large language models: benchmarking and evaluation, alignment and bias, and multi-agent systems."
+excerpt: "Research on natural language processing and large language models: benchmarking and evaluation, alignment and bias, multi-agent systems, and world models."
 ---
 
 I work on natural language processing and large language models, with a focus on how they are trained, fine-tuned, evaluated, and benchmarked. My broader interests include multi-agent systems, world models, alignment, and AI4Science. Across projects, I build benchmarks and evaluation pipelines, design multi-agent LLM systems, and test methods that make models more reliable and aligned.
@@ -136,6 +136,20 @@ Twenty-seven LLM agents, organized into PRISMA-inspired deliberative societies, 
 
 [arXiv](https://arxiv.org/abs/2509.17240)
 {: .project__links}
+</div>
+</div>
+
+## World models
+
+I am interested in world models and vision-language-action (VLA) models that learn general skills without task-specific supervision.
+
+<div class="project project--solo" markdown="1">
+<div class="project__text" markdown="1">
+<span class="venue-mark venue-mark--preprint">Independent project</span>
+
+### Label-free world models and VLAs
+
+I trained DreamerV3 and Dreamer 4 world models on DeepMind Control Suite tasks (humanoid, quadruped, cheetah) and fine-tuned OpenVLA on unlabeled simulation rollouts. The aim was to learn without task labels or explicit stop criteria, using rewards only indirectly, so that skills transfer across tasks: a model that learns to push and to pull should be able to open a drawer without ever training on drawers. Early runs of a world action model, trained for a few epochs under limited compute, showed promising results.
 </div>
 </div>
 

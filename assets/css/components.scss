@@ -475,6 +475,11 @@ summary:focus-visible {
   h3 { margin: .15em 0 .35em; }
   p { margin: 0 0 .7em; }
 }
+// A project without a figure: one text column at the reading measure.
+.page__content .project--solo {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 39em;
+}
 .project__figure {
   margin: 0;
 
