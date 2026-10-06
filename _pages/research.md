@@ -141,15 +141,24 @@ Twenty-seven LLM agents, organized into PRISMA-inspired deliberative societies, 
 
 ## World models
 
-I am interested in world models and vision-language-action (VLA) models that learn general skills without task-specific supervision.
+I am interested in world models as a foundation for embodied agents that keep learning: agents that adapt to new tasks, keep what they already know, and reuse it, without being told when the task has changed.
 
-<div class="project project--solo" markdown="1">
+<div class="project" markdown="1">
+<figure class="project__figure">
+  <a href="/assets/images/research/world-model-task-switch.png"><img src="/assets/images/research/world-model-task-switch.png" alt="World model prediction error spiking at both silent task boundaries" loading="lazy"></a>
+  <a href="/assets/images/research/world-model-tsne.png"><img src="/assets/images/research/world-model-tsne.png" alt="t-SNE of the world model's hidden states separating walker-stand and cheetah-run into two clusters" loading="lazy"></a>
+  <figcaption>Top: the world model's prediction error spikes at the exact step of each silent task switch. Bottom: its hidden states separate the two tasks without ever seeing a task label.</figcaption>
+</figure>
 <div class="project__text" markdown="1">
-<span class="venue-mark venue-mark--preprint">Independent project</span>
+<span class="venue-mark venue-mark--preprint">Proposal and preliminary results</span>
 
-### Label-free world models and VLAs
+### Task-agnostic continual learning for embodied agents
 
-I trained DreamerV3 and Dreamer 4 world models on DeepMind Control Suite tasks (humanoid, quadruped, cheetah) and fine-tuned OpenVLA on unlabeled simulation rollouts. The aim was to learn without task labels or explicit stop criteria, using rewards only indirectly, so that skills transfer across tasks: a model that learns to push and to pull should be able to open a drawer without ever training on drawers. Early runs of a world action model, trained for a few epochs under limited compute, showed promising results.
+Robots face tasks and dynamics that change without warning, yet most continual-learning methods depend on explicit task IDs and cleanly segmented replay. I proposed grounding task-agnostic continual reinforcement learning in a world model: a shared latent dynamics model, trained jointly with the policy, whose prediction error serves as a self-supervised signal that the dynamics have changed. A compositional skill memory then retains learned behaviors and recombines them over long horizons, for example building pick-and-place from reach, grasp, and release.
+
+To test the core idea, I adapted a PyTorch [DreamerV3](https://danijar.com/project/dreamerv3/) world model with a custom loader for non-stationary task streams, and trained it from 64×64 pixels on DeepMind Control tasks that switch silently: walker-stand, then cheetah-run, then walker-stand again, 25,000 steps each. With no task labels, its prior reconstruction error spiked 8× and 95× above baseline at the exact step of each switch, before the agent had a chance to fail, and its recurrent hidden states organized into a separate cluster for each task.
+
+I also reproduced [LEGION](https://www.nature.com/articles/s42256-025-00983-2) (*Nature Machine Intelligence*), a continual-RL baseline, on Meta-World MT10, and began adapting it to train without task IDs. Next steps are longer task sequences, switches at variable times, and transformer-based world models such as Dreamer 4.
 </div>
 </div>
 
